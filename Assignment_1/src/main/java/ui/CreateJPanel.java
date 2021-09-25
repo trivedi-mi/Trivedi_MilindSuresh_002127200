@@ -616,21 +616,8 @@ public class CreateJPanel extends javax.swing.JPanel  {
             
         }
         }*/
-        else if(!checkForNumber(faxNum)){
-            {
-                JOptionPane.showMessageDialog(this,"Invalid Fax Number");
-            }
-        }
-        else if(!(emailId.contains("@"))){
-            {
-                JOptionPane.showMessageDialog(this,"Invalid Email Id");
-            }
-        }
-        else if((ssnNo.length () != 9)){
-            {
-                JOptionPane.showMessageDialog(this,"Please enter valid 9 digit SSN number");
-            }
-        }
+        
+        
         else
         {
             person.setFirstName(fn);
