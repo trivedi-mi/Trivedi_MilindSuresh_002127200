@@ -8,7 +8,6 @@ package ui;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 import model.Person;
 
 /**
@@ -29,20 +28,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         this.person=person;
         displayInfo();
     }
-    public ImageIcon seticon(String m , byte[] image)
-    {
-        if(m  != null){
-        myImage=new ImageIcon(m);
-        
-        }else{
-        myImage=new ImageIcon(image);
-        }
-        Image img1=myImage.getImage();
-        Image img2=img1.getScaledInstance(lblImage.getWidth(), lblImage.getHeight(), Image.SCALE_SMOOTH);
-        ImageIcon i = new ImageIcon(img2);
-        return i;
-        
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -55,7 +41,6 @@ public class ViewJPanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel11 = new javax.swing.JPanel();
-        lblTtile = new javax.swing.JLabel();
         lblFirstName = new javax.swing.JLabel();
         lblLastName = new javax.swing.JLabel();
         lblStreet = new javax.swing.JLabel();
@@ -104,16 +89,17 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtAge = new javax.swing.JTextField();
         lblFaxNo = new javax.swing.JLabel();
         txtFaxNo = new javax.swing.JTextField();
-        lblImage = new javax.swing.JLabel();
+        lblTtile = new javax.swing.JLabel();
         lblImageDisp = new javax.swing.JLabel();
 
-        lblTtile.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
-        lblTtile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTtile.setText("Display");
-        lblTtile.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        setBackground(new java.awt.Color(204, 204, 255));
+
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jPanel11.setBackground(new java.awt.Color(204, 204, 255));
 
         lblFirstName.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblFirstName.setText("*First Name:");
+        lblFirstName.setText("First Name:");
 
         lblLastName.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         lblLastName.setText("Last Name:");
@@ -128,16 +114,16 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblState.setText("State:");
 
         lblZip.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblZip.setText("*Zip:");
+        lblZip.setText("Zip:");
 
         lblPhNo.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblPhNo.setText("*Phone Number:");
+        lblPhNo.setText("Phone Number:");
 
         lblDob.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblDob.setText("*Date of birth:");
+        lblDob.setText("Date of birth:");
 
         lblEmail.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblEmail.setText("*Email:");
+        lblEmail.setText("Email:");
 
         lblSsn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         lblSsn.setText("SSN:");
@@ -178,32 +164,74 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblLocId.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         lblLocId.setText("Local Id Number:");
 
+        txtFirstName.setEditable(false);
+
+        txtLastName.setEditable(false);
+
+        txtStreet.setEditable(false);
+
+        txtCity.setEditable(false);
+
+        txtState.setEditable(false);
+
+        txtZip.setEditable(false);
+
+        txtPhNo.setEditable(false);
+
+        txtEmail.setEditable(false);
+
+        txtSsn.setEditable(false);
+
+        txtMedRecNo.setEditable(false);
+
+        txtHealthPlanNo.setEditable(false);
+
+        txtBkAccNo.setEditable(false);
+
+        txtLicNo.setEditable(false);
+
+        txtLicDoi.setEditable(false);
+
+        txtVehicleNo.setEditable(false);
+
+        txtDevAdd.setEditable(false);
+
+        txtLinkedInAdd.setEditable(false);
+
+        txtIpAdd.setEditable(false);
+
+        txtRetinalNo.setEditable(false);
         txtRetinalNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtRetinalNotxtRetinalNo5txtRetinalNoActionPerformed(evt);
             }
         });
 
+        txtFingerIdenNo.setEditable(false);
         txtFingerIdenNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFingerIdenNotxtFingerIdenNo10txtFingerIdenNoActionPerformed(evt);
             }
         });
 
+        txtLocalIdNo.setEditable(false);
         txtLocalIdNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLocalIdNotxtFingerIdenNo11txtFingerIdenNo1ActionPerformed(evt);
             }
         });
 
+        txtDob.setEditable(false);
+
         lblAge.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblAge.setText("Age:");
+        lblAge.setText("Age(Years):");
+
+        txtAge.setEditable(false);
 
         lblFaxNo.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         lblFaxNo.setText("Fax Number:");
 
-        lblImage.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblImage.setText("Image:");
+        txtFaxNo.setEditable(false);
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -235,9 +263,8 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addComponent(lblFingerIdenNo)
                     .addComponent(lblLocId)
                     .addComponent(lblAge)
-                    .addComponent(lblFaxNo)
-                    .addComponent(lblImage))
-                .addGap(33, 33, 33)
+                    .addComponent(lblFaxNo))
+                .addGap(34, 34, 34)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtLocalIdNo, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
                     .addComponent(txtFingerIdenNo, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
@@ -262,19 +289,13 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addComponent(txtFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
                     .addComponent(txtDob)
                     .addComponent(txtAge)
-                    .addComponent(txtFaxNo)
-                    .addComponent(lblImageDisp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 653, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblTtile, javax.swing.GroupLayout.DEFAULT_SIZE, 1057, Short.MAX_VALUE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtFaxNo))
+                .addGap(0, 758, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
-                .addComponent(lblTtile)
-                .addGap(18, 18, 18)
+                .addGap(37, 37, 37)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -370,29 +391,44 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblLocId, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtLocalIdNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblImage, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblImageDisp, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(1155, Short.MAX_VALUE))
+                .addGap(0, 64, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel11);
+
+        lblTtile.setFont(new java.awt.Font("Lucida Console", 0, 18)); // NOI18N
+        lblTtile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTtile.setText("Display");
+        lblTtile.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1043, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 99, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(lblImageDisp, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblTtile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addGap(12, 12, 12)
+                .addComponent(lblTtile)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 722, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblImageDisp, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(144, 144, 144))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -422,7 +458,6 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblFingerIdenNo;
     private javax.swing.JLabel lblFirstName;
     private javax.swing.JLabel lblHealthPlanNo;
-    private javax.swing.JLabel lblImage;
     private javax.swing.JLabel lblImageDisp;
     private javax.swing.JLabel lblIpAdd;
     private javax.swing.JLabel lblLastName;
@@ -498,9 +533,11 @@ private void displayInfo() {
     }
 
 private Icon display(String logo) {
-        ImageIcon ic = new ImageIcon(logo);
+        // Function for Image display
+       ImageIcon ic = new ImageIcon(logo);
         Image originalImage = ic.getImage();
-        Image scaledImage = originalImage.getScaledInstance(350, 175, Image.SCALE_SMOOTH);
+        Image scaledImage = originalImage.getScaledInstance(500, 300, Image.SCALE_SMOOTH);
+        //Image scaledImage = originalImage.getScaledInstance(lblImageDisp.getWidth(),lblImageDisp.getHeight(),Image.SCALE_SMOOTH);
         ImageIcon image = new ImageIcon(scaledImage);
         return image;
         

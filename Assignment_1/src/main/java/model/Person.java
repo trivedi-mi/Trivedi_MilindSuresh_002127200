@@ -5,9 +5,7 @@
  */
 package model;
 
-import java.util.Date;
-import java.text.Format;
-import java.text.SimpleDateFormat;
+
 
 
 /**
@@ -23,8 +21,6 @@ public class Person {
     private String city;
     private String state;
     private int age;
-
-    
     private int zip;
     private String phoneNo;
     private String faxNumber;
@@ -42,6 +38,7 @@ public class Person {
     private String retinalIdenNo;
     private String fingerIdenNo;
     private String localIdNo;
+    private String uploadPath;
 
     
 
@@ -243,31 +240,5 @@ public class Person {
     public void setUploadPath(String uploadPath) {
         this.uploadPath = uploadPath;
     }
-    private String uploadPath;
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-}
+    }

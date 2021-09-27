@@ -5,52 +5,24 @@
  */
 package ui;
 
-import java.awt.Color;
+
 import java.io.File;
 import javax.swing.JOptionPane;
 import model.Person;
 import java.util.Date;
-import java.text.Format;
-import java.text.SimpleDateFormat;
-import java.text.ParseException;
-import java.util.Calendar;
-import java.util.TimeZone;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.lang.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.util.Date;
 import javax.swing.JTextField;
-import java.time.LocalDate;
-import java.util.Date;
-import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
-import java.util.Calendar;
-import java.util.TimeZone;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.lang.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.*;
-import javax.swing.border.Border;
+
 
 
 
@@ -130,7 +102,6 @@ public class CreateJPanel extends javax.swing.JPanel  {
         jDateChooserLDoi = new com.toedter.calendar.JDateChooser();
         lblFaxNo1 = new javax.swing.JLabel();
         txtFaxNo = new javax.swing.JTextField();
-        btnAgeCalc = new javax.swing.JButton();
         lblSelectFile = new javax.swing.JLabel();
         txtSelectFile = new javax.swing.JTextField();
         btnOpen = new javax.swing.JButton();
@@ -139,14 +110,20 @@ public class CreateJPanel extends javax.swing.JPanel  {
         lblErrFax = new javax.swing.JLabel();
         lblErrEmail = new javax.swing.JLabel();
         lblErrSsn = new javax.swing.JLabel();
+        lblErrFirstName = new javax.swing.JLabel();
+        lblErrLast = new javax.swing.JLabel();
+        lblErrCity = new javax.swing.JLabel();
+        lblErrState = new javax.swing.JLabel();
 
-        lblTtile.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        jPanel11.setBackground(new java.awt.Color(204, 204, 255));
+
+        lblTtile.setFont(new java.awt.Font("Lucida Console", 0, 18)); // NOI18N
         lblTtile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTtile.setText("Create");
         lblTtile.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         lblFirstName.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblFirstName.setText("*First Name:");
+        lblFirstName.setText("First Name:");
 
         lblLastName.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         lblLastName.setText("Last Name:");
@@ -161,16 +138,16 @@ public class CreateJPanel extends javax.swing.JPanel  {
         lblState.setText("State:");
 
         lblZip.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblZip.setText("*Zip:");
+        lblZip.setText("Zip:");
 
         lblPhNo.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblPhNo.setText("*Phone Number:");
+        lblPhNo.setText("Phone Number:");
 
         lblDob.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblDob.setText("*Date of birth:");
+        lblDob.setText("Date of birth:");
 
         lblEmail.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblEmail.setText("*Email:");
+        lblEmail.setText("Email:");
 
         lblSsn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         lblSsn.setText("SSN:");
@@ -211,6 +188,30 @@ public class CreateJPanel extends javax.swing.JPanel  {
         lblLocId.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         lblLocId.setText("Local Id Number:");
 
+        txtFirstName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtFirstNameKeyReleased(evt);
+            }
+        });
+
+        txtLastName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtLastNameKeyReleased(evt);
+            }
+        });
+
+        txtCity.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtCityKeyReleased(evt);
+            }
+        });
+
+        txtState.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtStateKeyReleased(evt);
+            }
+        });
+
         txtZip.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtZipKeyReleased(evt);
@@ -223,14 +224,9 @@ public class CreateJPanel extends javax.swing.JPanel  {
             }
         });
 
-        txtEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEmailActionPerformed(evt);
-            }
-        });
         txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtEmailKeyTyped(evt);
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtEmailKeyReleased(evt);
             }
         });
 
@@ -266,9 +262,10 @@ public class CreateJPanel extends javax.swing.JPanel  {
         });
 
         lblAge.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        lblAge.setText("Age:");
+        lblAge.setText("Age(Years):");
 
         txtAge.setEditable(false);
+        txtAge.setBackground(new java.awt.Color(204, 204, 204));
         txtAge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAgetxtFingerIdenNo11txtFingerIdenNo1ActionPerformed(evt);
@@ -293,13 +290,6 @@ public class CreateJPanel extends javax.swing.JPanel  {
             }
         });
 
-        btnAgeCalc.setText("Calculate Age");
-        btnAgeCalc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgeCalcActionPerformed(evt);
-            }
-        });
-
         lblSelectFile.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         lblSelectFile.setText("File Upload:");
 
@@ -317,20 +307,32 @@ public class CreateJPanel extends javax.swing.JPanel  {
             }
         });
 
-        lblErrZip.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
-        lblErrZip.setForeground(new java.awt.Color(255, 0, 0));
+        lblErrZip.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        lblErrZip.setForeground(new java.awt.Color(255, 51, 51));
 
-        lblErrPhNo.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
-        lblErrPhNo.setForeground(new java.awt.Color(255, 0, 51));
+        lblErrPhNo.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        lblErrPhNo.setForeground(new java.awt.Color(255, 51, 51));
 
-        lblErrFax.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
-        lblErrFax.setForeground(new java.awt.Color(255, 0, 0));
+        lblErrFax.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        lblErrFax.setForeground(new java.awt.Color(255, 51, 51));
 
-        lblErrEmail.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
-        lblErrEmail.setForeground(new java.awt.Color(255, 0, 0));
+        lblErrEmail.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        lblErrEmail.setForeground(new java.awt.Color(255, 51, 51));
 
-        lblErrSsn.setFont(new java.awt.Font("Tahoma", 2, 12)); // NOI18N
-        lblErrSsn.setForeground(new java.awt.Color(255, 0, 0));
+        lblErrSsn.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        lblErrSsn.setForeground(new java.awt.Color(255, 51, 51));
+
+        lblErrFirstName.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        lblErrFirstName.setForeground(new java.awt.Color(255, 51, 51));
+
+        lblErrLast.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        lblErrLast.setForeground(new java.awt.Color(255, 51, 51));
+
+        lblErrCity.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        lblErrCity.setForeground(new java.awt.Color(255, 51, 51));
+
+        lblErrState.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        lblErrState.setForeground(new java.awt.Color(255, 51, 51));
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -360,8 +362,9 @@ public class CreateJPanel extends javax.swing.JPanel  {
                                     .addComponent(lblRetinalNo)
                                     .addComponent(lblFingerIdenNo)
                                     .addComponent(lblLocId)
-                                    .addComponent(lblSelectFile))
-                                .addGap(33, 33, 33)
+                                    .addComponent(lblSelectFile)
+                                    .addComponent(lblFaxNo1))
+                                .addGap(30, 30, 30)
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnSave)
                                     .addGroup(jPanel11Layout.createSequentialGroup()
@@ -386,7 +389,7 @@ public class CreateJPanel extends javax.swing.JPanel  {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(btnOpen)
-                                            .addComponent(lblErrSsn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                            .addComponent(lblErrSsn, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)))))
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblFirstName)
@@ -397,16 +400,27 @@ public class CreateJPanel extends javax.swing.JPanel  {
                                     .addComponent(lblZip)
                                     .addComponent(lblPhNo)
                                     .addComponent(lblDob)
-                                    .addComponent(lblAge)
-                                    .addComponent(lblFaxNo1))
+                                    .addComponent(lblAge))
                                 .addGap(129, 129, 129)
-                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel11Layout.createSequentialGroup()
+                                        .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lblErrState, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(jPanel11Layout.createSequentialGroup()
+                                        .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lblErrCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addComponent(txtStreet, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel11Layout.createSequentialGroup()
+                                        .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lblErrLast, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(jPanel11Layout.createSequentialGroup()
+                                        .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lblErrFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(jPanel11Layout.createSequentialGroup()
                                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jDateChooserDob, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -416,7 +430,6 @@ public class CreateJPanel extends javax.swing.JPanel  {
                                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(lblErrEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
                                             .addComponent(lblErrZip, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(btnAgeCalc)
                                             .addComponent(lblErrPhNo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(lblErrFax, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))))
                 .addContainerGap())
@@ -424,15 +437,20 @@ public class CreateJPanel extends javax.swing.JPanel  {
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(7, 7, 7)
                 .addComponent(lblTtile)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblErrFirstName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblErrLast, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblStreet)
@@ -440,11 +458,14 @@ public class CreateJPanel extends javax.swing.JPanel  {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblErrCity, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblState, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblErrState, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblState, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblErrZip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -459,18 +480,17 @@ public class CreateJPanel extends javax.swing.JPanel  {
                         .addComponent(txtPhNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblDob, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAgeCalc, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jDateChooserDob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(12, 12, 12)
+                    .addComponent(jDateChooserDob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblDob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAge, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblAge, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtFaxNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblFaxNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrFax, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblErrFax, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblFaxNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblErrEmail, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -479,7 +499,7 @@ public class CreateJPanel extends javax.swing.JPanel  {
                         .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblErrSsn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblErrSsn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
                     .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lblSsn, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtSsn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -500,9 +520,9 @@ public class CreateJPanel extends javax.swing.JPanel  {
                     .addComponent(lblLicNo, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtLicNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblLicDoi, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jDateChooserLDoi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jDateChooserLDoi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblLicDoi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblVehicleNo, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -571,67 +591,84 @@ public class CreateJPanel extends javax.swing.JPanel  {
 
     private void btnSavebtnSave2btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavebtnSave2btnSaveActionPerformed
         // TODO add your handling code here:
-        String fn=txtFirstName.getText();
-        //String dob=txtDob7.getText();
+        String fn=person.getFirstName();
+        String ln=person.getLastName();
+        String city=person.getCity();
+        String zipCode=Integer.toString(person.getZip());
+        String phNo=person.getPhoneNo();
+        String faxNum=person.getFaxNumber();
+        String emailId=person.getEmail();
+        String ssnNo=person.getSsn();
+        String state=person.getState();
         String dateInsert  = ((JTextField)jDateChooserDob.getDateEditor().getUiComponent()).getText();
         String dateLicDoi  = ((JTextField)jDateChooserLDoi.getDateEditor().getUiComponent()).getText();
-        System.out.println(dateInsert);
-        String zipCode=txtZip.getText();
-        String phNo=txtPhNo.getText();
-        String faxNum=txtFaxNo.getText();
-        String emailId=txtEmail.getText();
-        String ssnNo=txtSsn.getText();
+       
         
         
         
-        /*boolean phFlag=false;
-        if(phNo.length() !=10)
-        {
-            phFlag=true;
-        }*/
-        
-        
-        if(fn.equals("")){
+        if((lblErrFirstName.getText() != null)) {
+            
             {
-                JOptionPane.showMessageDialog(this,"Invalid First Name");
+            JOptionPane.showMessageDialog(this,"Please enter valid first name");
             }
         }
-        /*else if(!checkForNumber(zipCode)){
+        else if((lblErrLast.getText() != null)){
             {
-                JOptionPane.showMessageDialog(this,"Invalid Zip");
+                JOptionPane.showMessageDialog(this,"Please enter valid last name");
             }
-        }*/
-        /*else if((!checkForNumber(phNo)) | phFlag){
+        }
+        else if((lblErrCity.getText() != null)){
             
             
             {
-                System.out.println("Inside Catch");
-                JOptionPane.showMessageDialog(this,"Invalid Phone Number");
+                JOptionPane.showMessageDialog(this,"Please enter valid city name");
             }
-        }*/
-        /*else if(!dateValidate(dateInsert)){
+        }
+        else if(lblErrState.getText() !=null && state!=null){
         {
             
-            JOptionPane.showMessageDialog(this,"Invalid date of birth");
+            JOptionPane.showMessageDialog(this,"Please enter valid state name");
             
         }
-        }*/
-        
+        }
+        else if(lblErrZip.getText() !=null && !zipCode.equals("0")){
+            if(zipCode.length() !=5){
+        {
+            
+            JOptionPane.showMessageDialog(this,"Please enter valid five digit zip code");
+             }
+        }}
+        else if(lblErrPhNo.getText() != null && phNo!=null){
+            
+        {
+            
+            JOptionPane.showMessageDialog(this,"Please enter valid phone number");
+             }
+        }
+        else if(lblErrFax.getText() != null && faxNum!=null){
+        {
+            
+            JOptionPane.showMessageDialog(this,"Please enter valid fax number");
+             }
+        }
+        else if(lblErrEmail.getText() != null && emailId!=null){
+        {
+            
+            JOptionPane.showMessageDialog(this,"Please enter valid email id");
+             }
+        }
+        else if(lblErrSsn.getText() != null && ssnNo!=null){
+        {
+            
+            JOptionPane.showMessageDialog(this,"Please enter valid nine digit ssn number");
+             }
+        }
         
         else
         {
-            person.setFirstName(fn);
-            person.setLastName(txtLastName.getText());
             
-            person.setStreet(txtStreet.getText());
-            person.setCity(txtCity.getText());
-            person.setState(txtState.getText());
-            //person.setZip(Integer.parseInt(zipCode));
-            person.setPhoneNo(phNo);
             person.setDob(dateInsert);
-            person.setFaxNumber(faxNum);
-            person.setEmail(emailId);
-            person.setSsn(ssnNo);
+            person.setStreet(txtStreet.getText());
             person.setMedRecNo(txtMedRecNo.getText());
             person.setHealthPlanNo(txtHealthPlanNo.getText());
             person.setBankAccount(txtBkAccNo.getText());
@@ -644,23 +681,6 @@ public class CreateJPanel extends javax.swing.JPanel  {
             person.setRetinalIdenNo(txtRetinalNo.getText());
             person.setFingerIdenNo(txtFingerIdenNo.getText());
             person.setLocalIdNo(txtLocalIdNo.getText());
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-           
-            
-           
-            
-            
-            
 
             JOptionPane.showMessageDialog(this,"Information saved");
         }
@@ -670,19 +690,6 @@ public class CreateJPanel extends javax.swing.JPanel  {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAgetxtFingerIdenNo11txtFingerIdenNo1ActionPerformed
 
-    private void btnAgeCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgeCalcActionPerformed
-        // TODO add your handling code here:
-        String dateInsert  = ((JTextField)jDateChooserDob.getDateEditor().getUiComponent()).getText();
-        try {
-            int ageInYears=findAge(dateInsert);
-            System.out.println(ageInYears);
-            person.setAge(ageInYears);
-            txtAge.setText(Integer.toString(person.getAge()));
-        } catch (ParseException ex) {
-            Logger.getLogger(CreateJPanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_btnAgeCalcActionPerformed
-
     private void txtSelectFiletxtFingerIdenNo11txtFingerIdenNo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSelectFiletxtFingerIdenNo11txtFingerIdenNo1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSelectFiletxtFingerIdenNo11txtFingerIdenNo1ActionPerformed
@@ -691,35 +698,78 @@ public class CreateJPanel extends javax.swing.JPanel  {
         // TODO add your handling code here:
         String getPath;
         JFileChooser chooseFile = new JFileChooser();
-        chooseFile.showOpenDialog(null);
-        File f = chooseFile.getSelectedFile();
-        getPath = f.getAbsolutePath();
-        String uploadPath = getPath;
-//        System.out.println(restLogo);
-        txtSelectFile.setText(uploadPath);
-        person.setUploadPath(uploadPath);
-       
-        
-        
-        
-        
-        
-        
-        
+        FileNameExtensionFilter filterImage= new FileNameExtensionFilter("IMAGE_FILES","png","jpg","jpeg");
+        chooseFile.addChoosableFileFilter(filterImage);
+        int flag = chooseFile.showSaveDialog(null);
+        if (flag == JFileChooser.APPROVE_OPTION){
+        File selectedImageFile = chooseFile.getSelectedFile();
+        String selectedImagePath = selectedImageFile.getAbsolutePath();
+        JOptionPane.showMessageDialog(null, selectedImagePath);
+        txtSelectFile.setText(selectedImagePath);
+        person.setUploadPath(selectedImagePath);
+            
+        }     
     }//GEN-LAST:event_btnOpenActionPerformed
 
-    private void txtEmailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmailKeyTyped
+    private void jDateChooserDobPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jDateChooserDobPropertyChange
         // TODO add your handling code here:
-         var emailId=txtEmail.getText();
-        String PATTERN="^(.+)@(.+)$";
+        
+        String dateInsert  = ((JTextField)jDateChooserDob.getDateEditor().getUiComponent()).getText();
+        try {
+            
+            int ageInYears=findAge(dateInsert);
+            person.setAge(ageInYears);
+            txtAge.setText(Integer.toString(person.getAge()));
+        }catch (ParseException ex) {
+            System.out.println("Error in calculating age");
+        }    
+    }//GEN-LAST:event_jDateChooserDobPropertyChange
+
+    private void txtZipKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtZipKeyReleased
+        // TODO add your handling code here:
+        String zipCode=txtZip.getText();
+        String PATTERN="^[0-9]{5}";
         Pattern patt=Pattern.compile(PATTERN);
-        Matcher match=patt.matcher(emailId);
-        if (! match.matches()){
-            lblErrEmail.setText("Enter Proper Format!!");
-        }else{
-        lblErrEmail.setText(null);
+        Matcher match=patt.matcher(zipCode);
+        
+        if (!match.matches()){    
+        {
+            
+            lblErrZip.setText("Enter valid five digit zip!");
+        }}else{
+        lblErrZip.setText(null);
+        person.setZip(Integer.parseInt(zipCode));
         }
-    }//GEN-LAST:event_txtEmailKeyTyped
+    }//GEN-LAST:event_txtZipKeyReleased
+
+    private void txtPhNoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPhNoKeyReleased
+        // TODO add your handling code here:
+        String phNo=txtPhNo.getText();
+        String PATTERN="^[0-9]{3}-[0-9]{3}-[0-9]{4}$";
+        //String PATTERN="\\d+";
+        Pattern patt=Pattern.compile(PATTERN);
+        Matcher match=patt.matcher(phNo);
+        if (!match.matches()){
+            lblErrPhNo.setText("Enter valid phone number in format XXX-XXX-XXXX!!");
+        }else{
+        lblErrPhNo.setText(null);
+        person.setPhoneNo(phNo);
+        }
+    }//GEN-LAST:event_txtPhNoKeyReleased
+
+    private void txtFirstNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFirstNameKeyReleased
+        // TODO add your handling code here:
+        String fn=txtFirstName.getText();
+        String PATTERN="^[a-zA-Z\\s]*$";
+        Pattern patt=Pattern.compile(PATTERN);
+        Matcher match=patt.matcher(fn);
+        if (!match.matches()){
+            lblErrFirstName.setText("Invalid first name");
+        }else{
+        lblErrFirstName.setText(null);
+        person.setFirstName(fn);
+        }
+    }//GEN-LAST:event_txtFirstNameKeyReleased
 
     private void txtSsnKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSsnKeyReleased
         // TODO add your handling code here:
@@ -728,43 +778,12 @@ public class CreateJPanel extends javax.swing.JPanel  {
         Pattern patt=Pattern.compile(PATTERN);
         Matcher match=patt.matcher(ssnNo);
         if (! match.matches() | (ssnNo.length() !=9 )){
-            lblErrSsn.setText("Enter Proper Format!!");
+            lblErrSsn.setText("Enter nine digit SSN!!");
         }else{
         lblErrSsn.setText(null);
+        person.setSsn(ssnNo);
         }
-        
     }//GEN-LAST:event_txtSsnKeyReleased
-
-    private void txtPhNoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPhNoKeyReleased
-        // TODO add your handling code here:
-        String phNo=txtPhNo.getText();
-        String PATTERN="^[0-9]{3}-[0-9]{3}-[0-9]{4}$";
-        Pattern patt=Pattern.compile(PATTERN);
-        Matcher match=patt.matcher(phNo);
-        if (! match.matches()){
-            lblErrPhNo.setText("Enter Proper Format!!");
-        }else{
-        lblErrPhNo.setText(null);
-        }
-        
-        
-         
-    }//GEN-LAST:event_txtPhNoKeyReleased
-
-    private void txtZipKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtZipKeyReleased
-        // TODO add your handling code here:
-        String zipCode=txtZip.getText();
-        String PATTERN="\\d+";
-        Pattern patt=Pattern.compile(PATTERN);
-        Matcher match=patt.matcher(zipCode);
-        if (! match.matches() | (zipCode.length() !=5 )){
-            lblErrZip.setText("Enter Proper Format!!");
-        }else{
-        lblErrZip.setText(null);
-        }
-        
-        
-    }//GEN-LAST:event_txtZipKeyReleased
 
     private void txtFaxNoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFaxNoKeyReleased
         // TODO add your handling code here:
@@ -773,36 +792,71 @@ public class CreateJPanel extends javax.swing.JPanel  {
         Pattern patt=Pattern.compile(PATTERN);
         Matcher match=patt.matcher(faxNo);
         if (!match.matches()){
-            lblErrFax.setText("Enter Proper Format!!");
+            lblErrFax.setText("Invalid fax number. Only digits allowed!");
         }else{
         lblErrFax.setText(null);
+        person.setFaxNumber(faxNo);
         }
-        
     }//GEN-LAST:event_txtFaxNoKeyReleased
 
-    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
+    private void txtCityKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCityKeyReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmailActionPerformed
+        String city=txtCity.getText();
+        String PATTERN="^[a-zA-Z\\s]*$";
+        Pattern patt=Pattern.compile(PATTERN);
+        Matcher match=patt.matcher(city);
+        if (!match.matches()){
+            lblErrCity.setText("Invalid city");
+        }else{
+        lblErrCity.setText(null);
+        person.setCity(city);
+        }
+    }//GEN-LAST:event_txtCityKeyReleased
 
-    private void jDateChooserDobPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jDateChooserDobPropertyChange
+    private void txtEmailKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmailKeyReleased
         // TODO add your handling code here:
-        String dateInsert  = ((JTextField)jDateChooserDob.getDateEditor().getUiComponent()).getText();
-        try {
-            int ageInYears=findAge(dateInsert);
-            System.out.println(ageInYears);
-            txtAge.setText("");
-            person.setAge(ageInYears);
-            txtAge.setText(Integer.toString(person.getAge()));
-            
-        } catch (ParseException ex) {
-            Logger.getLogger(CreateJPanel.class.getName()).log(Level.SEVERE, null, ex);
-        
-    }       
-    }//GEN-LAST:event_jDateChooserDobPropertyChange
+        var emailId=txtEmail.getText();
+        String PATTERN="^(.+)@(.+)$";
+        Pattern patt=Pattern.compile(PATTERN);
+        Matcher match=patt.matcher(emailId);
+        if (! match.matches()){
+            lblErrEmail.setText("Invalid email!");
+        }else{
+        lblErrEmail.setText(null);
+        person.setEmail(emailId);
+        }
+    }//GEN-LAST:event_txtEmailKeyReleased
+
+    private void txtStateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtStateKeyReleased
+        // TODO add your handling code here:
+        String state=txtState.getText();
+        String PATTERN="^[a-zA-Z\\s]*$";
+        Pattern patt=Pattern.compile(PATTERN);
+        Matcher match=patt.matcher(state);
+        if (!match.matches()){
+            lblErrState.setText("Invalid state.");
+        }else{
+        lblErrState.setText(null);
+        person.setState(state);
+        }
+    }//GEN-LAST:event_txtStateKeyReleased
+
+    private void txtLastNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtLastNameKeyReleased
+        // TODO add your handling code here:
+        String ln=txtLastName.getText();
+        String PATTERN="^[a-zA-Z\\s]*$";
+        Pattern patt=Pattern.compile(PATTERN);
+        Matcher match=patt.matcher(ln);
+        if (!match.matches()){
+            lblErrLast.setText("Invalid last name");
+        }else{
+        lblErrLast.setText(null);
+        person.setLastName(ln);
+        }
+    }//GEN-LAST:event_txtLastNameKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgeCalc;
     private javax.swing.JButton btnOpen;
     private javax.swing.JButton btnSave;
     private com.toedter.calendar.JDateChooser jDateChooserDob;
@@ -815,10 +869,14 @@ public class CreateJPanel extends javax.swing.JPanel  {
     private javax.swing.JLabel lblDevAdd;
     private javax.swing.JLabel lblDob;
     private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblErrCity;
     private javax.swing.JLabel lblErrEmail;
     private javax.swing.JLabel lblErrFax;
+    private javax.swing.JLabel lblErrFirstName;
+    private javax.swing.JLabel lblErrLast;
     private javax.swing.JLabel lblErrPhNo;
     private javax.swing.JLabel lblErrSsn;
+    private javax.swing.JLabel lblErrState;
     private javax.swing.JLabel lblErrZip;
     private javax.swing.JLabel lblFaxNo1;
     private javax.swing.JLabel lblFingerIdenNo;
@@ -865,52 +923,12 @@ public class CreateJPanel extends javax.swing.JPanel  {
     private javax.swing.JTextField txtZip;
     // End of variables declaration//GEN-END:variables
 
-    /*private static boolean dateValidate(String dob) {
-        boolean dateFlag=true;
-        
-        SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-        dateFormat.setLenient(false);
-        try
-        {
-            Date formatted=dateFormat.parse(dob);
-        }
-        catch(Exception e)
-                {
-                    System.out.println(e);
-                    dateFlag=false;
-                  
-                }
-        return dateFlag;
-    }*/
     
-   /* private static boolean dateValidate(String dob)  {
-        boolean dateFlag=true;
-        try {
-            
-            
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
-            Date todayDate=new Date();
-            String currentDate=dateFormat.format(todayDate);
-            System.out.println(currentDate);
-            Date dateDob = dateFormat.parse(dob);
-            Date dateCurrent = dateFormat.parse(currentDate);
-            int result=dateDob.compareTo(dateCurrent);
-            System.out.println(result);
-            if(result > 0)
-            {
-                dateFlag=false;
-            }
-            
-            
-        } catch (ParseException ex) {
-            Logger.getLogger(CreateJPanel.class.getName()).log(Level.SEVERE, null, ex);
-     
-        }
-        return dateFlag;
-    }*/
-    
-    private static int findAge(String dob) throws ParseException  {
+   
+    private int findAge(String dob) throws ParseException  {
+        //Function to calculate age from date of birth
          int age=0;
+         System.out.println("Inside find age");
         
            try{ 
             
@@ -922,29 +940,12 @@ public class CreateJPanel extends javax.swing.JPanel  {
             Period period = Period.between(givenDate, LocalDate.now());
             age=period.getYears();
             
-            
-            
-        } catch (ParseException ex) {
+            } catch (ParseException ex) {
+            System.out.println(ex);
             System.out.println("Problem with calculating age");
      
         }
         return age;
     }
-    
   
-
-
-    private static boolean checkForNumber(String numCheck) {
-        boolean flag=true;
-        try
-        {
-            Long.parseLong(numCheck);
-                    
-        }
-        catch(Exception e)
-                {
-                   flag=false; 
-        }
-       return flag; 
-    }
 }
