@@ -591,6 +591,7 @@ public class CreateJPanel extends javax.swing.JPanel  {
 
     private void btnSavebtnSave2btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavebtnSave2btnSaveActionPerformed
         // TODO add your handling code here:
+        
         String fn=person.getFirstName();
         String ln=person.getLastName();
         String city=person.getCity();
@@ -608,13 +609,16 @@ public class CreateJPanel extends javax.swing.JPanel  {
         
         if((lblErrFirstName.getText() != null)) {
             
+            
             {
             JOptionPane.showMessageDialog(this,"Please enter valid first name");
+           
             }
         }
         else if((lblErrLast.getText() != null)){
             {
                 JOptionPane.showMessageDialog(this,"Please enter valid last name");
+              
             }
         }
         else if((lblErrCity.getText() != null)){
@@ -622,6 +626,7 @@ public class CreateJPanel extends javax.swing.JPanel  {
             
             {
                 JOptionPane.showMessageDialog(this,"Please enter valid city name");
+                
             }
         }
         else if(lblErrState.getText() !=null && state!=null){
@@ -683,6 +688,35 @@ public class CreateJPanel extends javax.swing.JPanel  {
             person.setLocalIdNo(txtLocalIdNo.getText());
 
             JOptionPane.showMessageDialog(this,"Information saved");
+            txtFirstName.setText(null);
+            txtLastName.setText(null);
+            txtStreet.setText(null);
+            txtCity.setText(null);
+            txtState.setText(null);
+            txtZip.setText(null);
+            txtPhNo.setText(null);
+            txtFaxNo.setText(null);
+            txtEmail.setText(null);
+            txtSsn.setText(null);
+            txtMedRecNo.setText(null);
+            txtHealthPlanNo.setText(null);
+            txtBkAccNo.setText(null);
+            txtLicNo.setText(null);
+            jDateChooserLDoi.setCalendar(null);
+            txtVehicleNo.setText(null);
+            txtDevAdd.setText(null);
+            txtLinkedInId.setText(null);
+            txtIpAdd.setText(null);
+            txtRetinalNo.setText(null);
+            txtFingerIdenNo.setText(null);
+            txtLocalIdNo.setText(null);
+            txtSelectFile.setText(null);
+            
+            
+            
+            
+            
+            
         }
     }//GEN-LAST:event_btnSavebtnSave2btnSaveActionPerformed
 
