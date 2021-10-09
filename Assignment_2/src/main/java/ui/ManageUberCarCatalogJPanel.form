@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jScrollPane1" min="-2" pref="927" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jButtonViewDetails" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonDeleteDetails" min="-2" pref="103" max="-2" attributes="0"/>
+                          <Component id="jButtonRefresh" min="-2" pref="103" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabelSerialNumber" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelBrand" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelManufacYear" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelCarCity" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelModelNo" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelExpiredMaintenance" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelCurrentlyAvailable" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelCurrentlyUnavailable" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelFirstAvailable" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelUsedByUber" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelLastUpdate" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jTextSerialNumber" min="-2" pref="196" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonSearchSerialNum" min="-2" pref="189" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jTextCarCity" min="-2" pref="196" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonSearchFilterCity" min="-2" pref="189" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jTextFirstAvailable" min="-2" pref="196" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonSearchFirstAvailable" min="-2" pref="189" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jTextUsedByUber" min="-2" pref="196" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonSearchManuByUber" min="-2" pref="189" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jTextLastTime" min="-2" pref="196" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonSearchLastUpdate" min="-2" pref="189" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jTextCurrentlyUnavailable" min="-2" pref="196" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonSearchCurrentUnavai" min="-2" pref="189" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jTextFieldhModelNumber" min="-2" pref="196" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonSearchModelNumber" min="-2" pref="189" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jTextExpiredCertificate" min="-2" pref="196" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonSearchMaintenanceCerti" min="-2" pref="189" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jTextCurrentlyAvailable" min="-2" pref="196" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonSearchCurrentAvail" min="-2" pref="189" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jTextBrand" min="-2" pref="196" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jButtonSearchBrandName" min="-2" pref="189" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jTextManufacYear" min="-2" pref="196" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jButtonSearchManuYesr" min="-2" pref="189" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
+                                      <Component id="jLabelMinAndMAx" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabelBookCarMinSeats" min="-2" pref="195" max="-2" attributes="0"/>
+                                          <Component id="jLabelBookCarMaxSeats" min="-2" pref="187" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jTextBookCarMinSeats" min="-2" pref="32" max="-2" attributes="0"/>
+                                          <Component id="jTextBookCarMaxSeats" min="-2" pref="32" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                      <Component id="jButtonSearchMinAndMax" min="-2" pref="189" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="230" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jScrollPane1" min="-2" pref="112" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jButtonViewDetails" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jButtonDeleteDetails" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jButtonRefresh" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelSerialNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextSerialNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonSearchSerialNum" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabelBrand" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextBrand" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonSearchBrandName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabelManufacYear" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextManufacYear" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonSearchManuYesr" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabelMinAndMAx" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelBookCarMinSeats" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextBookCarMinSeats" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelBookCarMaxSeats" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextBookCarMaxSeats" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jButtonSearchMinAndMax" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelCarCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextCarCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonSearchFilterCity" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelModelNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldhModelNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonSearchModelNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelExpiredMaintenance" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextExpiredCertificate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonSearchMaintenanceCerti" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelCurrentlyAvailable" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextCurrentlyAvailable" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonSearchCurrentAvail" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelCurrentlyUnavailable" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextCurrentlyUnavailable" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonSearchCurrentUnavai" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelFirstAvailable" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFirstAvailable" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonSearchFirstAvailable" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelUsedByUber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextUsedByUber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonSearchManuByUber" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelLastUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextLastTime" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonSearchLastUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="178" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="jTableUberCar">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="9" rowCount="0">
+                <Column editable="false" title="Brand Name" type="java.lang.Object"/>
+                <Column editable="false" title="Year" type="java.lang.Object"/>
+                <Column editable="false" title="Min Seats" type="java.lang.Object"/>
+                <Column editable="false" title="Max Seats" type="java.lang.Object"/>
+                <Column editable="false" title="Available City" type="java.lang.Object"/>
+                <Column editable="false" title="Serial Number" type="java.lang.Object"/>
+                <Column editable="false" title="Model Number" type="java.lang.Object"/>
+                <Column editable="false" title="Certificate" type="java.lang.Object"/>
+                <Column editable="false" title="Availability" type="java.lang.Object"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabelSerialNumber">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter Serial Number to find the details of Car:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextSerialNumber">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelBrand">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Filter list of cars by brand name:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextBrand">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelManufacYear">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Filter list of cars by manufacturing year:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextManufacYear">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelCarCity">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Filter list of cars by city:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextCarCity">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextCarCityActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelModelNo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Filter list of cars by model number:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldhModelNumber">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelExpiredMaintenance">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Filter list of cars by expired maintenance certificate:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextExpiredCertificate">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelCurrentlyAvailable">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Number of cars currently available:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextCurrentlyAvailable">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelCurrentlyUnavailable">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Number of cars currently unavailable:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextCurrentlyUnavailable">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelFirstAvailable">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Find the first available passenger car:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFirstAvailable">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelUsedByUber">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="List all the cars manufacturer used by Uber:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextUsedByUber">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelLastUpdate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Last updated time of catalog:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextLastTime">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextLastTimeActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelBookCarMinSeats">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter minimum number of seats:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextBookCarMinSeats">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelBookCarMaxSeats">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter maximum number of seats:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextBookCarMaxSeats">
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSearchSerialNum">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchSerialNumActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSearchBrandName">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchBrandNameActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSearchManuYesr">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchManuYesrActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSearchFilterCity">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchFilterCityActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSearchFirstAvailable">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchFirstAvailableActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSearchModelNumber">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchModelNumberActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSearchMaintenanceCerti">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchMaintenanceCertiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSearchCurrentAvail">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchCurrentAvailActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSearchCurrentUnavai">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchCurrentUnavaiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSearchManuByUber">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchManuByUberActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSearchLastUpdate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchLastUpdateActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonSearchMinAndMax">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchMinAndMaxActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelMinAndMAx">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="12" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="List Cars with Minimum and Maximum Seats"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonViewDetails">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="VIEW DETAILS"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonViewDetailsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonDeleteDetails">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="DELETE"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonDeleteDetailsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonRefresh">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="REFRESH"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRefreshActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
