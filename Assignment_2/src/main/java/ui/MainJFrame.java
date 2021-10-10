@@ -37,20 +37,16 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane2 = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
-        jLabelTitle = new javax.swing.JLabel();
         jButtonCreate = new javax.swing.JButton();
         JButtonManage = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jSplitPane2.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelTitle.setText("WELCOME TO UBER APP");
-        jLabelTitle.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabelTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         jButtonCreate.setText("Create New Car");
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +62,10 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setBackground(new java.awt.Color(204, 204, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Milind\\Desktop\\uber-logo-map resize.jpg")); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -76,14 +76,17 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 300, Short.MAX_VALUE)
                 .addComponent(JButtonManage)
                 .addGap(199, 199, 199))
-            .addComponent(jLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addComponent(jLabelTitle)
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonCreate)
                     .addComponent(JButtonManage))
@@ -111,8 +114,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
         // TODO add your handling code here:
-        /*CreateUberCarJPanel createPanel=new CreateUberCarJPanel(jPanel2, carList);
-        jSplitPane2.setBottomComponent(createPanel);*/
+        
         CreateUberCarJPanel panel = new CreateUberCarJPanel(jPanel2, carList);
         jPanel2.add("CreateUberCarJPanel",panel);
         CardLayout layout = (CardLayout) jPanel2.getLayout();
@@ -122,8 +124,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private void JButtonManageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonManageActionPerformed
         // TODO add your handling code here:
         
-        /*ManageUberCarCatalogJPanel managePanel=new ManageUberCarCatalogJPanel(jPanel2, carList);
-        jSplitPane2.setBottomComponent(managePanel);*/
+       
         
         ManageUberCarCatalogJPanel panel = new ManageUberCarCatalogJPanel(jPanel2, carList);
         jPanel2.add("ManageUberCarCatalogJPanel",panel);
@@ -169,7 +170,7 @@ public class MainJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JButtonManage;
     private javax.swing.JButton jButtonCreate;
-    private javax.swing.JLabel jLabelTitle;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane jSplitPane2;

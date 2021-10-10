@@ -54,27 +54,7 @@ public class ManageUberCarCatalogJPanel extends javax.swing.JPanel {
         }
     }
      
-     /*public void findString(String get, String getBox) {
-        DefaultTableModel tbl = (DefaultTableModel) jTableUberCar.getModel();
-        tbl.setRowCount(0);
-        for(UberCar car : carList.getCarList()){
-            Object[] row = new Object[10];
-           row[0] = car;
-            row[1] = car.getManufacturedYear();
-            row[2] = car.getMinSeats();
-            row[3] = car.getMaxSeats();
-            row[4] = car.getAvailableCity();
-            row[5] = car.getSerialNumber();
-            row[6] = car.getModelNumber();
-            row[7] = car.isMaintenanceCertificate();
-            row[8] = car.isAvailable(); 
-            System.out.println("serial in" +car.getSerialNumber());
-            System.out.println("text out " +jTextSerialNumber.getText());
-            
-            if(get.equals(getBox)){
-                System.out.println("Inside if");
-                  tbl.addRow(row); 
-            } }  }*/         
+     
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -130,12 +110,14 @@ public class ManageUberCarCatalogJPanel extends javax.swing.JPanel {
         jButtonDeleteDetails = new javax.swing.JButton();
         jButtonRefresh = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 204, 255));
+
         jTableUberCar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Brand Name", "Year", "Min Seats", "Max Seats", "Available City", "Serial Number", "Model Number", "Certificate", "Availability"
+                "Brand Name", "Year", "Min Seats", "Max Seats", "Available City", "Serial Number", "Model Number", "Certificate Valid", "Availability"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -312,11 +294,12 @@ public class ManageUberCarCatalogJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 927, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 998, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonViewDetails)
                             .addComponent(jButtonDeleteDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonViewDetails)
                             .addComponent(jButtonRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -404,9 +387,9 @@ public class ManageUberCarCatalogJPanel extends javax.swing.JPanel {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButtonViewDetails)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButtonDeleteDetails)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButtonRefresh)))
                 .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -495,13 +478,13 @@ public class ManageUberCarCatalogJPanel extends javax.swing.JPanel {
     }
     
     else{
-        System.out.println("Inside");
+        
         UberCar car = (UberCar)jTableUberCar.getValueAt(selectedRow,0);
         ViewUberCarCatalogJPanel panel = new ViewUberCarCatalogJPanel(jPanel2, car,  carList); 
         jPanel2.add("ViewUberCarCatalogJPanel",panel);
         CardLayout layout = (CardLayout) jPanel2.getLayout();
         layout.next(jPanel2);
-        System.out.println("Outside");
+        
         }    
     }//GEN-LAST:event_jButtonViewDetailsActionPerformed
 
@@ -528,19 +511,7 @@ public class ManageUberCarCatalogJPanel extends javax.swing.JPanel {
 
     private void jButtonSearchSerialNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchSerialNumActionPerformed
         // TODO add your handling code here:
-       /*UberCar result = carList.searchCarSerialNum(jTextSerialNumber.getText());
-       System.out.println(result);
-        if (result==null){
-            JOptionPane.showMessageDialog(null,"Serial Number you entered does not exists", "Information", JOptionPane.INFORMATION_MESSAGE);
-        }
-        else{
-            ViewUberCarCatalogJPanel panel = new ViewUberCarCatalogJPanel(jPanel2, result);
-            jPanel2.add("ViewUberCarCatalogJPanel",panel);
-            CardLayout layout = (CardLayout) jPanel2.getLayout();
-            layout.next(jPanel2);
        
-        }
-       */
        DefaultTableModel tbl = (DefaultTableModel) jTableUberCar.getModel();
         tbl.setRowCount(0);
         for(UberCar car : carList.getCarList()){
@@ -808,7 +779,7 @@ public class ManageUberCarCatalogJPanel extends javax.swing.JPanel {
         tbl.setRowCount(0);       
         for(UberCar car : carList.getCarList()){
             Object[] row = new Object[10];
-            if(Integer.parseInt(jTextBookCarMinSeats.getText())==(car.getMinSeats())&&Integer.parseInt(jTextBookCarMaxSeats.getText())==(car.getMaxSeats())){
+            
             row[0] = car;
             row[1] = car.getManufacturedYear();
             row[2] = car.getMinSeats();
@@ -817,9 +788,11 @@ public class ManageUberCarCatalogJPanel extends javax.swing.JPanel {
             row[5] = car.getSerialNumber();
             row[6] = car.getModelNumber();
             row[7] = car.isMaintenanceCertificate();
-            row[8] = car.isAvailable();             
+            row[8] = car.isAvailable();
+            if(car.getMaxSeats() <= Integer.parseInt(jTextBookCarMaxSeats.getText()) && car.getMaxSeats() >= Integer.parseInt(jTextBookCarMinSeats.getText())){
             tbl.addRow(row);             
-        }
+            }
+        //}
         }
         
     }//GEN-LAST:event_jButtonSearchMinAndMaxActionPerformed

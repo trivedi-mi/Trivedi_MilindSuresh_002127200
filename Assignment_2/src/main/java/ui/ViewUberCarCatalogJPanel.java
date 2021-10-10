@@ -97,8 +97,10 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
         jButtonUpdate = new javax.swing.JButton();
         jButtonBack = new javax.swing.JButton();
 
-        jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelTitle.setText("VIEW UBER CAR DETAILS");
+        setBackground(new java.awt.Color(255, 255, 204));
+
+        jLabelTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabelTitle.setText("View Uber Car Details");
 
         jLabelBrandName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabelBrandName.setText("Brand Name:");
@@ -118,7 +120,8 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
         jLabelCarAvailability.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabelCarAvailability.setText("Is Car Available?");
 
-        jCheckBoxCarAvailabilty.setText("Click for Yes");
+        jCheckBoxCarAvailabilty.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jCheckBoxCarAvailabilty.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jCheckBoxCarAvailabilty.setEnabled(false);
 
         jLabelCarSerialNumber.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -128,9 +131,9 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
         jLabelCarCity.setText("City:");
 
         jLabelMaintenanceCertificate.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabelMaintenanceCertificate.setText("Maintenance Certificate:");
+        jLabelMaintenanceCertificate.setText("Maintenance Certificate Valid?");
 
-        jCheckBoxMaintenanceCertificate.setText("Click for Yes");
+        jCheckBoxMaintenanceCertificate.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jCheckBoxMaintenanceCertificate.setEnabled(false);
 
         jButtonSave.setText("SAVE");
@@ -141,6 +144,7 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
         });
 
         jTextFieldBrand.setEditable(false);
+        jTextFieldBrand.setBackground(new java.awt.Color(240, 240, 240));
 
         jTextFieldModelNum.setEditable(false);
 
@@ -151,6 +155,7 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
         jTextFieldMaximumSeats.setEditable(false);
 
         jTextFieldSerialNumber.setEditable(false);
+        jTextFieldSerialNumber.setBackground(new java.awt.Color(240, 240, 240));
 
         jTextFieldCity.setEditable(false);
 
@@ -173,9 +178,12 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(197, 197, 197)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabelMaintenanceCertificate)
                             .addComponent(jLabelCarCity)
@@ -186,30 +194,27 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
                             .addComponent(jLabelMinSeats)
                             .addComponent(jLabelMaxSeats)
                             .addComponent(jLabelCarAvailability))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(51, 51, 51)
-                                .addComponent(jLabelTitle))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jCheckBoxMaintenanceCertificate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jCheckBoxCarAvailabilty, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldBrand)
-                                    .addComponent(jTextFieldModelNum)
-                                    .addComponent(jTextFieldYearOfManu)
-                                    .addComponent(jTextFieldMinimumSeats)
-                                    .addComponent(jTextFieldMaximumSeats)
-                                    .addComponent(jTextFieldSerialNumber)
-                                    .addComponent(jTextFieldCity)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonUpdate)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonBack, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(72, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jCheckBoxMaintenanceCertificate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBoxCarAvailabilty, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextFieldBrand)
+                            .addComponent(jTextFieldModelNum)
+                            .addComponent(jTextFieldYearOfManu)
+                            .addComponent(jTextFieldMinimumSeats)
+                            .addComponent(jTextFieldMaximumSeats)
+                            .addComponent(jTextFieldSerialNumber)
+                            .addComponent(jTextFieldCity, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 101, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonUpdate)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonBack, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButtonBack, jButtonSave, jButtonUpdate});
@@ -217,9 +222,9 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addGap(41, 41, 41)
                 .addComponent(jLabelTitle)
-                .addGap(32, 32, 32)
+                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelCarSerialNumber)
                     .addComponent(jTextFieldSerialNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -255,12 +260,12 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelMaintenanceCertificate)
                     .addComponent(jCheckBoxMaintenanceCertificate, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonSave)
+                    .addComponent(jButtonBack)
                     .addComponent(jButtonUpdate)
-                    .addComponent(jButtonBack))
-                .addContainerGap())
+                    .addComponent(jButtonSave))
+                .addGap(52, 52, 52))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonBack, jButtonSave, jButtonUpdate});
@@ -272,10 +277,10 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
         
         
         jTextFieldModelNum.setEditable(true);
-        jTextFieldYearOfManu.setEditable(true);
+        
         jTextFieldMinimumSeats.setEditable(true);
         jTextFieldMaximumSeats.setEditable(true);
-        //jTextFieldSerialNumber.setEditable(true);
+       
         jTextFieldCity.setEditable(true);
         jCheckBoxCarAvailabilty.setEnabled(true);
         jCheckBoxMaintenanceCertificate.setEnabled(true);
