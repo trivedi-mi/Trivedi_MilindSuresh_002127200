@@ -144,7 +144,6 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
         });
 
         jTextFieldBrand.setEditable(false);
-        jTextFieldBrand.setBackground(new java.awt.Color(240, 240, 240));
 
         jTextFieldModelNum.setEditable(false);
 
@@ -155,7 +154,6 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
         jTextFieldMaximumSeats.setEditable(false);
 
         jTextFieldSerialNumber.setEditable(false);
-        jTextFieldSerialNumber.setBackground(new java.awt.Color(240, 240, 240));
 
         jTextFieldCity.setEditable(false);
 
@@ -181,9 +179,6 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
                 .addGap(197, 197, 197)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabelMaintenanceCertificate)
                             .addComponent(jLabelCarCity)
@@ -204,11 +199,13 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
                             .addComponent(jTextFieldMinimumSeats)
                             .addComponent(jTextFieldMaximumSeats)
                             .addComponent(jTextFieldSerialNumber)
-                            .addComponent(jTextFieldCity, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 101, Short.MAX_VALUE)))
+                            .addComponent(jTextFieldCity, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(jLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(120, 120, 120)
+                .addGap(138, 138, 138)
                 .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonUpdate)
@@ -222,9 +219,9 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addGap(40, 40, 40)
                 .addComponent(jLabelTitle)
-                .addGap(37, 37, 37)
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelCarSerialNumber)
                     .addComponent(jTextFieldSerialNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -260,12 +257,12 @@ public class ViewUberCarCatalogJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelMaintenanceCertificate)
                     .addComponent(jCheckBoxMaintenanceCertificate, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonBack)
                     .addComponent(jButtonUpdate)
                     .addComponent(jButtonSave))
-                .addGap(52, 52, 52))
+                .addGap(48, 48, 48))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonBack, jButtonSave, jButtonUpdate});

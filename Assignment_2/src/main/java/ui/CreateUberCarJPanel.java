@@ -73,7 +73,7 @@ public class CreateUberCarJPanel extends javax.swing.JPanel {
         JLabelMainCertiValid = new javax.swing.JLabel();
         jDateChooserValid = new com.toedter.calendar.JDateChooser();
 
-        setBackground(new java.awt.Color(153, 255, 204));
+        setBackground(new java.awt.Color(204, 255, 204));
 
         jLabelTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabelTitle.setText("Register Car With Uber");

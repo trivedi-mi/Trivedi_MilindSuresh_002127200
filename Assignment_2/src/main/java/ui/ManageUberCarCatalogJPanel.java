@@ -110,7 +110,7 @@ public class ManageUberCarCatalogJPanel extends javax.swing.JPanel {
         jButtonDeleteDetails = new javax.swing.JButton();
         jButtonRefresh = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 204, 255));
+        setBackground(new java.awt.Color(255, 204, 204));
 
         jTableUberCar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -789,7 +789,7 @@ public class ManageUberCarCatalogJPanel extends javax.swing.JPanel {
             row[6] = car.getModelNumber();
             row[7] = car.isMaintenanceCertificate();
             row[8] = car.isAvailable();
-            if(car.getMaxSeats() <= Integer.parseInt(jTextBookCarMaxSeats.getText()) && car.getMaxSeats() >= Integer.parseInt(jTextBookCarMinSeats.getText())){
+            if(car.getMaxSeats() <= Integer.parseInt(jTextBookCarMaxSeats.getText()) && car.getMinSeats() >= Integer.parseInt(jTextBookCarMinSeats.getText())){
             tbl.addRow(row);             
             }
         //}
