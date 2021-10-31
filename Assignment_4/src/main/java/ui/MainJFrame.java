@@ -95,7 +95,7 @@ s.close();
         jLabel1.setBackground(new java.awt.Color(204, 204, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jButtonAddPatient.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        jButtonAddPatient.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
         jButtonAddPatient.setText("REGISTER PATIENT");
         jButtonAddPatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +103,7 @@ s.close();
             }
         });
 
-        ManageEncounterVisitToPresent.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        ManageEncounterVisitToPresent.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
         ManageEncounterVisitToPresent.setText("MANAGE PATIENT");
         ManageEncounterVisitToPresent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +111,7 @@ s.close();
             }
         });
 
-        jButtonGetCommunityStats.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        jButtonGetCommunityStats.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
         jButtonGetCommunityStats.setText("COMMUNITY DETAILS");
         jButtonGetCommunityStats.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,7 +119,7 @@ s.close();
             }
         });
 
-        jButtonUpdateDetails.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        jButtonUpdateDetails.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
         jButtonUpdateDetails.setText("UPDATE");
         jButtonUpdateDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

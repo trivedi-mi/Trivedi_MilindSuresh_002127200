@@ -107,7 +107,7 @@
             <Component class="javax.swing.JButton" name="jButtonAddPatient">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="12" style="3"/>
+                  <Font name="Times New Roman" size="12" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="REGISTER PATIENT"/>
               </Properties>
@@ -118,7 +118,7 @@
             <Component class="javax.swing.JButton" name="ManageEncounterVisitToPresent">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="12" style="3"/>
+                  <Font name="Times New Roman" size="12" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="MANAGE PATIENT"/>
               </Properties>
@@ -129,7 +129,7 @@
             <Component class="javax.swing.JButton" name="jButtonGetCommunityStats">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="12" style="3"/>
+                  <Font name="Times New Roman" size="12" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="COMMUNITY DETAILS"/>
               </Properties>
@@ -140,7 +140,7 @@
             <Component class="javax.swing.JButton" name="jButtonUpdateDetails">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="12" style="3"/>
+                  <Font name="Times New Roman" size="12" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="UPDATE"/>
               </Properties>

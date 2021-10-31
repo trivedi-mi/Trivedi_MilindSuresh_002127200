@@ -262,7 +262,7 @@ System.out.println(list.size());
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Enter Patient Details");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 3, 10)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 3, 10)); // NOI18N
         jLabel3.setText("PATIENT DIRECTORY");
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 

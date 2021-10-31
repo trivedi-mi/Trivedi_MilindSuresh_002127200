@@ -157,10 +157,10 @@ public class Community extends javax.swing.JPanel {
         jLabelSerialNo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabelSerialNo.setText("Enter Serial Number of Community from Community List:");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
         jLabel1.setText("PERSON DIRECTORY");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
         jLabel2.setText("COMMUNITY LIST");
 
         jButtonCheckAbnormal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -171,7 +171,7 @@ public class Community extends javax.swing.JPanel {
             }
         });
 
-        jLablesNamesList.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        jLablesNamesList.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
         jLablesNamesList.setText("LIST OF PEOPLE WITH ABNORMAL BLOOD PRESSURE");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N

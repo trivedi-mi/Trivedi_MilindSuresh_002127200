@@ -209,7 +209,7 @@ Clinic clinic=Clinic.getInstance();
         jLabelManage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelManage.setText("MANAGE PATIENT");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 10)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 10)); // NOI18N
         jLabel1.setText("ENCOUNTER HISTORY OF PATIENT");
 
         jLabelMobileNumber.setText("Enter Mobile Number:");

@@ -233,7 +233,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="3"/>
+          <Font name="Times New Roman" size="12" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="PERSON DIRECTORY"/>
       </Properties>
@@ -241,7 +241,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="3"/>
+          <Font name="Times New Roman" size="12" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="COMMUNITY LIST"/>
       </Properties>
@@ -260,7 +260,7 @@
     <Component class="javax.swing.JLabel" name="jLablesNamesList">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="3"/>
+          <Font name="Times New Roman" size="12" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="LIST OF PEOPLE WITH ABNORMAL BLOOD PRESSURE"/>
       </Properties>
