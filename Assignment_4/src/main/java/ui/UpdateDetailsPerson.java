@@ -87,6 +87,8 @@ public class UpdateDetailsPerson extends javax.swing.JPanel {
         jLabelNewMobileNumber = new javax.swing.JLabel();
         jTextFieldNewMobileNumber = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(153, 153, 255));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("UPDATE DETAILS");
