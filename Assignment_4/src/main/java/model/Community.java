@@ -18,6 +18,7 @@ public class Community {
     private String zipCode;
     private String communityName;
     private ArrayList<House> housesList=new ArrayList<House>();
+    Clinic clinic=Clinic.getInstance();
 
     public Community(String communityName,String zipCode) {
         this.communityName = communityName;
@@ -84,14 +85,21 @@ public class Community {
      
     public List<String> listOfAbnormalPatiens(int agelow, int agehigh){              //Print only Abnormal Patients
        List<String> abno=new ArrayList<String>(); 
+       ArrayList<Patient> nameList=new ArrayList<Patient>();
+       List<String> names=new ArrayList<String>();
+       nameList=clinic.getList();
+       for(int z=0;z<nameList.size();z++){
+        names.add(nameList.get(z).getPersonName());
+       }
         for(int i=0;i<housesList.size();i++){
             for(int j=0;j<housesList.get(i).getHouseMem().size();j++){
                
                    if(!(housesList.get(i).getHouseMem().get(j).isThisVitalSignNormal())){ 
                     System.out.println(housesList.get(i).getHouseMem().get(j).getPersonName());
                     if( housesList.get(i).getHouseMem().get(j).getPersonAge() >= agelow && housesList.get(i).getHouseMem().get(j).getPersonAge() <= agehigh){
+                     if(names.contains(housesList.get(i).getHouseMem().get(j).getPersonName())){
                     abno.add(housesList.get(i).getHouseMem().get(j).getPersonName());
-                }}
+                }}}
                     }
         }
     return abno;
