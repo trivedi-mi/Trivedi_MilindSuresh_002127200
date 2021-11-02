@@ -17,7 +17,7 @@ import ui.MainJFrame;
 
 /**
  *
- * @author admin
+ * @author Milind
  */
 public class Patient extends Person {
    

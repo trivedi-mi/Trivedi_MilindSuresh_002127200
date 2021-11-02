@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author admin
+ * @author Milind
  */
 public class Person {
     

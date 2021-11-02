@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author admin
+ * @author Milind
  */
 public class House {
     private String houseAdress;

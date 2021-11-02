@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author admin
+ * @author Milind
  */
 public class Community {
     

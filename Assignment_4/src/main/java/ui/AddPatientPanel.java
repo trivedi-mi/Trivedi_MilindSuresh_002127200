@@ -418,7 +418,30 @@ System.out.println(list.size());
     private void jButtonSaveAddPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveAddPatientActionPerformed
         // TODO add your handling code here:
         
+        try{
+            if("".equals(jTextFieldPatientName.getText())){
+             throw new Exception();
+        }}
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Please enter Patient Name!");
+            return;
+        }
+        try
+        {
+        String name=jTextFieldPatientName.getText();
+        String PATTERN="^[a-zA-Z\\s]*$";
         
+        Pattern patt=Pattern.compile(PATTERN);
+        Matcher match=patt.matcher(name);
+        if (!match.matches()){
+            throw new Exception();
+        }}
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "Please enter valid Patient Name!");
+            return;
+            
+        }
         
         try{
             
