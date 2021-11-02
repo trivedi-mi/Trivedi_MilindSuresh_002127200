@@ -372,24 +372,61 @@ Clinic clinic=Clinic.getInstance();
         String mobile=jTextFieldMobileNumber.getText();
         System.out.println(patientDirectory.size());
         if (checkIfNumberALreadyExists(mobile) == -1) {
-            JOptionPane.showMessageDialog(null, "This Patient with given mobile does not exist");
+            DefaultTableModel tbl = (DefaultTableModel) jTableEncounterHistory.getModel();
+               
+               tbl.setRowCount(0);
+            jTextFieldGivenNumberLinked.setText(null);
+            jTextFieldIsPatientNormal.setText(null);
+            jTextFieldIsPatientNormal.setText(null);
+            jTextFieldIsBPNormal.setText(null);
+            jTextFieldCurrentVital.setText(null);
+            jTextFieldVitals.setText(null);
+            jTextRespiratoryRateNew.setText(null);
+            jTextHeartRateNew.setText(null);
+            jTextBloodPressureNew.setText(null);
+            jTextWeightkgNew.setText(null);
+            JOptionPane.showMessageDialog(null, "This Patient with given mobile does not exist!");
+            return;
         } else {
             
             saveNewEncounter(patientDirectory.get(checkIfNumberALreadyExists(mobile)));}
         
            
             JOptionPane.showMessageDialog(null, "Save successful!");
+            jTextRespiratoryRateNew.setText(null);
+            jTextHeartRateNew.setText(null);
+            jTextBloodPressureNew.setText(null);
+            jTextWeightkgNew.setText(null);
             avalibleOptions(patientDirectory.get(checkIfNumberALreadyExists(mobile)));
 
     }//GEN-LAST:event_jButtonEncounterNewActionPerformed
 
     private void jButtonCheckMobileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCheckMobileActionPerformed
         // TODO add your handling code here:
+        
         ArrayList<Patient> patientDirectory=clinic.getList();
         String mobile=jTextFieldMobileNumber.getText();
         System.out.println(patientDirectory.size());
         if (checkIfNumberALreadyExists(mobile) == -1) {
-            JOptionPane.showMessageDialog(null, "Patient does not exist!");;
+            DefaultTableModel tbl = (DefaultTableModel) jTableEncounterHistory.getModel();
+               
+               tbl.setRowCount(0);
+            jTextFieldGivenNumberLinked.setText(null);
+            jTextFieldIsPatientNormal.setText(null);
+            jTextFieldIsPatientNormal.setText(null);
+            jTextFieldIsBPNormal.setText(null);
+            jTextFieldCurrentVital.setText(null);
+            jTextFieldVitals.setText(null);
+            jTextRespiratoryRateNew.setText(null);
+            jTextHeartRateNew.setText(null);
+            jTextBloodPressureNew.setText(null);
+            jTextWeightkgNew.setText(null);
+            
+            
+            
+            
+            JOptionPane.showMessageDialog(null, "Patient does not exist!");
+            return;
 
         } else {
             
