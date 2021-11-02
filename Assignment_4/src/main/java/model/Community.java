@@ -82,15 +82,16 @@ public class Community {
     }
     
      
-    public List<String> listOfAbnormalPatiens(){              //Print only Abnormal Patients
+    public List<String> listOfAbnormalPatiens(int agelow, int agehigh){              //Print only Abnormal Patients
        List<String> abno=new ArrayList<String>(); 
         for(int i=0;i<housesList.size();i++){
             for(int j=0;j<housesList.get(i).getHouseMem().size();j++){
                
                    if(!(housesList.get(i).getHouseMem().get(j).isThisVitalSignNormal())){ 
                     System.out.println(housesList.get(i).getHouseMem().get(j).getPersonName());
+                    if( housesList.get(i).getHouseMem().get(j).getPersonAge() >= agelow && housesList.get(i).getHouseMem().get(j).getPersonAge() <= agehigh){
                     abno.add(housesList.get(i).getHouseMem().get(j).getPersonName());
-                }
+                }}
                     }
         }
     return abno;

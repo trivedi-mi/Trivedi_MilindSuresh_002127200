@@ -52,6 +52,10 @@ public class Community extends javax.swing.JPanel {
         jButtonCheckAbnormal = new javax.swing.JButton();
         jLablesNamesList = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabelAgeMin = new javax.swing.JLabel();
+        jTextAgeMin = new javax.swing.JTextField();
+        jLabelAgeMax = new javax.swing.JLabel();
+        jTextAgeMax = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(204, 255, 255));
 
@@ -155,7 +159,7 @@ public class Community extends javax.swing.JPanel {
         jTextFieldAbormalBloodPressure.setEditable(false);
 
         jLabelSerialNo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabelSerialNo.setText("Enter Serial Number of Community from Community List:");
+        jLabelSerialNo.setText("Community Serial Number:");
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
         jLabel1.setText("PERSON DIRECTORY");
@@ -164,7 +168,7 @@ public class Community extends javax.swing.JPanel {
         jLabel2.setText("COMMUNITY LIST");
 
         jButtonCheckAbnormal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButtonCheckAbnormal.setText("CHECK");
+        jButtonCheckAbnormal.setText("GET LIST");
         jButtonCheckAbnormal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCheckAbnormalActionPerformed(evt);
@@ -177,6 +181,12 @@ public class Community extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("COMMUNITY DETAILS");
+
+        jLabelAgeMin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabelAgeMin.setText("Age Minimum:");
+
+        jLabelAgeMax.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabelAgeMax.setText("Age Maximum:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -201,7 +211,7 @@ public class Community extends javax.swing.JPanel {
                         .addComponent(jLabelNumberAbnormal)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldAbormalBloodPressure, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(444, 444, 444))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(136, 136, 136)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -209,25 +219,33 @@ public class Community extends javax.swing.JPanel {
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLablesNamesList, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabelSerialNo))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(103, 103, 103)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButtonCheckAbnormal)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addGap(15, 15, 15)
-                                                .addComponent(jTextSelectCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                            .addComponent(jLablesNamesList, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(271, 271, 271))
+                                                .addComponent(jLabelSerialNo)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextSelectCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabelAgeMin)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextAgeMin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabelAgeMax)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextAgeMax, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(94, 94, 94)
+                                        .addComponent(jButtonCheckAbnormal)))))
+                        .addContainerGap())))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(164, 164, 164))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -247,11 +265,17 @@ public class Community extends javax.swing.JPanel {
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jLabelSerialNo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextSelectCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelSerialNo)
+                            .addComponent(jTextSelectCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelAgeMin)
+                            .addComponent(jTextAgeMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelAgeMax)
+                            .addComponent(jTextAgeMax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
                         .addComponent(jButtonCheckAbnormal)))
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -311,9 +335,19 @@ public class Community extends javax.swing.JPanel {
     private void jButtonCheckAbnormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCheckAbnormalActionPerformed
         // TODO add your handling code here:
         try{
+       int agelow=Integer.parseInt(jTextAgeMin.getText());
+       int agehigh=Integer.parseInt(jTextAgeMax.getText());
+       }
+       catch(Exception e){
+        JOptionPane.showMessageDialog(null, "Invalid age range!");
+        return;
+       }
+        try{
+        int agelow=Integer.parseInt(jTextAgeMin.getText());
+       int agehigh=Integer.parseInt(jTextAgeMax.getText());
         int getSerial=Integer.parseInt(jTextSelectCommunity.getText());
         List<String> arAb=new ArrayList<String>();
-        arAb=clinic.getListABnormal(getSerial);
+        arAb=clinic.getListABnormal(getSerial,agelow, agehigh);
         System.out.println(arAb);
         DefaultTableModel tbl = (DefaultTableModel) jTableAbnormalName.getModel();
         tbl.setRowCount(0);
@@ -328,7 +362,7 @@ public class Community extends javax.swing.JPanel {
         jTextFieldAbormalBloodPressure.setText(Integer.toString(arAb.size()));
         }
         catch(Exception e){
-         JOptionPane.showMessageDialog(null, "Enter valid community Serial No");
+         JOptionPane.showMessageDialog(null, "Enter valid community Serial No.");
          return;
         }
     }//GEN-LAST:event_jButtonCheckAbnormalActionPerformed
@@ -341,6 +375,8 @@ public class Community extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabelAgeMax;
+    private javax.swing.JLabel jLabelAgeMin;
     private javax.swing.JLabel jLabelNumberAbnormal;
     private javax.swing.JLabel jLabelSerialNo;
     private javax.swing.JLabel jLablesNamesList;
@@ -350,6 +386,8 @@ public class Community extends javax.swing.JPanel {
     private javax.swing.JTable jTableAbnormalName;
     private javax.swing.JTable jTableCommunityList;
     private javax.swing.JTable jTablePersonDirectory;
+    private javax.swing.JTextField jTextAgeMax;
+    private javax.swing.JTextField jTextAgeMin;
     private javax.swing.JTextField jTextFieldAbormalBloodPressure;
     private javax.swing.JTextField jTextSelectCommunity;
     // End of variables declaration//GEN-END:variables

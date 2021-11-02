@@ -67,35 +67,34 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabelVitalSigns" min="-2" pref="182" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabelPatientAge" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelPatientName" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelPatientMobileNumber" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelPatientResidenceHouse" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelPatientResidenceCommu" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelPatientResidenceZip" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextFieldPatientName" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldPatientAge" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldPatientMobile" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldPatientResidenceHouse" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldPatientResidenceCommu" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldPatientResidenceZip" min="-2" pref="98" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabelVitalSigns" min="-2" pref="182" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabelPatientAge" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelPatientName" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelPatientMobileNumber" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelPatientResidenceHouse" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelPatientResidenceCommu" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelPatientResidenceZip" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jTextFieldPatientName" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldPatientAge" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldPatientMobile" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldPatientResidenceHouse" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldPatientResidenceCommu" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldPatientResidenceZip" min="-2" pref="98" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
                               <Component id="jButtonSaveAddPatient" min="-2" max="-2" attributes="0"/>

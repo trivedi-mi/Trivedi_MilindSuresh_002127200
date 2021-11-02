@@ -40,11 +40,11 @@ public class Clinic {
 
     
     
-    public List<String> getListABnormal(int co){
+    public List<String> getListABnormal(int co, int agelow, int agehigh){
     
         List<String> arr=new ArrayList<String>();
     
-    arr=city.communityList.get(co-1).listOfAbnormalPatiens();
+    arr=city.communityList.get(co-1).listOfAbnormalPatiens(agelow, agehigh);
     return arr;
     }
 

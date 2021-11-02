@@ -109,6 +109,7 @@ System.out.println(list.size());
                 row[0]=i+1;
                 row[1]=patientDirectory.get(i).getPersonName();
                 row[2]=patientDirectory.get(i).getMobileNumber();
+                
                 tbl.addRow(row);
                         
                 System.out.println((i + 1) + ". " + patientDirectory.get(i).getPersonName() + "   " + patientDirectory.get(i).getMobileNumber());
@@ -440,7 +441,7 @@ System.out.println(list.size());
         }}
         catch(Exception e)
         {
-            JOptionPane.showMessageDialog(null, "Please enter valid 10 digit Mobile number!");
+            JOptionPane.showMessageDialog(null, "Please enter valid 10 digit Mobile numberin format XXXXXXXXXX!");
             return;
             
         }
