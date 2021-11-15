@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  *
- * @author admin
+ * @author Milind
  */
 public class City {
     private String cityName;

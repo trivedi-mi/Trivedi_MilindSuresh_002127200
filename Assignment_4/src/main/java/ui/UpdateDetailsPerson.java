@@ -325,7 +325,7 @@ public class UpdateDetailsPerson extends javax.swing.JPanel {
     }
     patientDirectory.get(index).getHouse().setHouseAdress(house);
     patientDirectory.get(index).setPersonName(name);
-    JOptionPane.showMessageDialog(null, "Update successful");
+    JOptionPane.showMessageDialog(null, "Update successful!");
     jTextFieldMobileNumber.setText(null);
      jTextFieldName.setText(null);
      jTextFieldHouse1.setText(null);
