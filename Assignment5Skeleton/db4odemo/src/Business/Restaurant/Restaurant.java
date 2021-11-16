@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Business.Restaurant;
+import Business.Menu.MenuDirectory;
 
 /**
  *
