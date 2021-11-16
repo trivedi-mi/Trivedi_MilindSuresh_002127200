@@ -14,6 +14,7 @@ import Business.WorkQueue.WorkRequest;
  *
  * @author 12013
  */
+//order
 public class Order extends WorkRequest{
     
     private String orderId;
