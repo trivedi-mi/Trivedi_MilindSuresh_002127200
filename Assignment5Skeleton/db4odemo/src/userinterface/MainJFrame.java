@@ -119,7 +119,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(logoutJButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(loginJLabel)
-                .addContainerGap(595, Short.MAX_VALUE))
+                .addContainerGap(626, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);
@@ -127,6 +127,8 @@ public class MainJFrame extends javax.swing.JFrame {
         container.setLayout(new java.awt.CardLayout());
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/image_assignmnt5.jpg"))); // NOI18N
+        jLabel3.setMaximumSize(new java.awt.Dimension(1300, 1000));
+        jLabel3.setPreferredSize(new java.awt.Dimension(1300, 1000));
         container.add(jLabel3, "card2");
 
         jSplitPane1.setRightComponent(container);
