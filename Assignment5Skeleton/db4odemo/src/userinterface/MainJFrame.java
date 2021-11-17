@@ -144,7 +144,7 @@ public class MainJFrame extends javax.swing.JFrame {
         }
         
         else if(system.getUserAccountDirectory().authenticateUser(userNameJTextField.getText(), passwordField.getText()) == null) {
-            JOptionPane.showMessageDialog(null,"Invalid UserName Password Combination!");
+            JOptionPane.showMessageDialog(null,"Invalid Username or Password!");
             return;
         }
         
