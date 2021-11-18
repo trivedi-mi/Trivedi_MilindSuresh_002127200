@@ -199,7 +199,7 @@ public class ManageRestaurantJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblRestaurant.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Please select a restaurant from the table", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please select a restaurant from the table!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         Restaurant restaurant = (Restaurant)tblRestaurant.getValueAt(selectedRow,0);
@@ -222,7 +222,7 @@ public class ManageRestaurantJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblRestaurant.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Please select a restaurant from the table", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please select a restaurant from the table!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
 

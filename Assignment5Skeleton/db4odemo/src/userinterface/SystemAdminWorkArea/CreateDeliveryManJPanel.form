@@ -22,46 +22,37 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jLabel1" pref="1317" max="32767" attributes="0"/>
-          <Group type="102" alignment="1" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="624" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabel3" min="-2" pref="163" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" pref="160" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="428" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabel5" min="-2" pref="121" max="-2" attributes="0"/>
-                          <Component id="jLabel4" min="-2" pref="121" max="-2" attributes="0"/>
-                          <Component id="jLabel6" alignment="1" min="-2" pref="121" max="-2" attributes="0"/>
-                          <Component id="jLabel7" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="1" min="-2" pref="121" max="-2" attributes="0"/>
-                          <Component id="jLabel9" min="-2" pref="121" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtPhoneNumber" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
-                          <Component id="txtHomeAddress" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
-                          <Component id="txtAge" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
-                          <Component id="txtEmailAddress" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
-                          <Component id="txtPassword" alignment="0" min="-2" pref="165" max="-2" attributes="0"/>
-                          <Component id="txtUsername" alignment="0" min="-2" pref="165" max="-2" attributes="0"/>
-                          <Component id="txtFirstName" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
-                          <Component id="txtLastName" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="530" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="562" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="446" max="-2" attributes="0"/>
               <Component id="btnCreate" min="-2" pref="94" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
               <Component id="btnBack" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel5" alignment="1" min="-2" pref="121" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="1" min="-2" pref="121" max="-2" attributes="0"/>
+                  <Component id="jLabel6" alignment="1" min="-2" pref="121" max="-2" attributes="0"/>
+                  <Component id="jLabel7" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel8" alignment="1" min="-2" pref="121" max="-2" attributes="0"/>
+                  <Component id="jLabel9" alignment="1" min="-2" pref="121" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="1" min="-2" pref="160" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="1" min="-2" pref="163" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="txtPhoneNumber" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
+                  <Component id="txtHomeAddress" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
+                  <Component id="txtAge" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
+                  <Component id="txtEmailAddress" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
+                  <Component id="txtPassword" alignment="0" min="-2" pref="165" max="-2" attributes="0"/>
+                  <Component id="txtUsername" alignment="0" min="-2" pref="165" max="-2" attributes="0"/>
+                  <Component id="txtFirstName" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
+                  <Component id="txtLastName" alignment="1" min="-2" pref="165" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="530" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

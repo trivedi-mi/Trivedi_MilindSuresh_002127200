@@ -45,8 +45,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         for (Order order : business.getOrderDirectory().getOrderDirectory()) {
             if (order.getDeliveryMan() != null && order.getDeliveryMan().equals(userAccount.getEmployee().getName()) && order.getOrderStatus().equalsIgnoreCase("Delivery Man Assigned")) {
-//            if (order.getDeliveryMan().equals(userAccount.getEmployee().getName())){
-//            if (order.getOrderStatus() != null && order.getOrderStatus().equals("Delivery Man Assigned")) {
+
                 Object[] row = new Object[7];
                 row[0] = order;
                 row[1] = order.getMessage();
@@ -137,7 +136,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
                 btnPickUpActionPerformed(evt);
             }
         });
-        add(btnPickUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
+        add(btnPickUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, -1, 30));
 
         processJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         processJButton.setText("Complete Delivery");
@@ -146,7 +145,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
                 processJButtonActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 540, 190, -1));
+        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 540, 190, -1));
 
         refreshJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         refreshJButton.setText("Refresh");
@@ -155,7 +154,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
                 refreshJButtonActionPerformed(evt);
             }
         });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 210, -1, -1));
+        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 210, -1, 30));
 
         tblDeliveryMan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -199,13 +198,13 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         int selectedRow = workRequestJTable.getSelectedRow();
 
         if (selectedRow < 0){
-            JOptionPane.showMessageDialog(null,"Select a row to continue");
+            JOptionPane.showMessageDialog(null,"Select a row to continue!");
             return;
         }
 
         Order order = (Order) workRequestJTable.getValueAt(selectedRow,0);
-        //        order.setDeliveryMan(userAccount.getEmployee().getName());
-        order.setOrderStatus("Order Picked up");
+        
+        order.setOrderStatus("Order Picked up!");
         populateTable();
         populateDeliveryTable();
 
@@ -216,19 +215,19 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         int selectedRow = tblDeliveryMan.getSelectedRow();
 
         if (selectedRow < 0){
-            JOptionPane.showMessageDialog(null,"Please select a row");
+            JOptionPane.showMessageDialog(null,"Please select a row!");
             return;
         }
 
         Order order = (Order) tblDeliveryMan.getValueAt(selectedRow, 0);
         if(order.getOrderStatus().equals("Delivered")) {
-            JOptionPane.showMessageDialog(null, "Already Delivered.");
+            JOptionPane.showMessageDialog(null, "Already Delivered!");
             return;
         }
         order.setOrderStatus("Delivered");
-        //orderDirectory.getOrderDirectory().remove(order);
+        
 
-        JOptionPane.showMessageDialog(null, "The Order is delivered! Enjoy your food!");
+        JOptionPane.showMessageDialog(null, "Delivery marked as completed!");
         populateDeliveryTable();
 
     }//GEN-LAST:event_processJButtonActionPerformed

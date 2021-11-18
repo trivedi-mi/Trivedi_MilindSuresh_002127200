@@ -83,9 +83,9 @@ public class ModifyRestroInfoJPanel extends javax.swing.JPanel {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Restaurant Name :");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Modify Restaurant");
+        jLabel1.setText("Modify Restaurant Details");
 
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnBack.setText("Back");
@@ -147,7 +147,7 @@ public class ModifyRestroInfoJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCreate)
                     .addComponent(btnBack))
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -155,7 +155,7 @@ public class ModifyRestroInfoJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         if(txtRestaurantName.getText().isEmpty() || txtManagerName.getText().isEmpty() ||
             txtPhoneNumber.getText().isEmpty() || txtAddress.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Fields cannot be left empty");
+            JOptionPane.showMessageDialog(null, "Fields cannot be left empty!");
             return;
         }
 
@@ -163,18 +163,15 @@ public class ModifyRestroInfoJPanel extends javax.swing.JPanel {
 
         String phoneNumber = txtPhoneNumber.getText();
 
-        if(phoneNumber.length() != 10) {
-            JOptionPane.showMessageDialog(null, "PhoneNumber must be of 10 digits");
-            return;
-        }
-        flag = phoneNumber.matches("^[0-9]+$");
+        
+        flag = phoneNumber.matches("^[0-9]{3}-[0-9]{3}-[0-9]{4}$");
         if(!flag) {
-            JOptionPane.showMessageDialog(null, "Phone Number must have digits only");
+            JOptionPane.showMessageDialog(null, "Enter valid phone number in format XXX-XXX-XXXX!");
             return;
         }
         for(Restaurant res : restaurantDirectory.getRestaurantDirectory()) {
             if(res.getPhoneNumber().equals(phoneNumber) && this.restaurant != res) {
-                JOptionPane.showMessageDialog(null, "Phone Number already exists");
+                JOptionPane.showMessageDialog(null, "Phone Number already exist!");
                 return;
             }
         }
@@ -186,7 +183,7 @@ public class ModifyRestroInfoJPanel extends javax.swing.JPanel {
         restaurant.setPhoneNumber(phoneNumber);
         restaurant.setAddress(address);
 
-        JOptionPane.showMessageDialog(null, "Restaurant Updated");
+        JOptionPane.showMessageDialog(null, "Restaurant Details Updated!");
     }//GEN-LAST:event_btnCreateActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

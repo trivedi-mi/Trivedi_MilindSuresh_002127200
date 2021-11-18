@@ -300,7 +300,7 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
         UserAccount usserAccount = ecoSystem.getUserAccountDirectory().createUserAccount(userName, password, employee, new CustomerRole());
         
         
-        JOptionPane.showMessageDialog(null, "Customer created successfully!");
+        JOptionPane.showMessageDialog(null, "Customer details saved successfully!");
         
         txtAge.setText(" ");
         txtEmailAddress.setText(" ");

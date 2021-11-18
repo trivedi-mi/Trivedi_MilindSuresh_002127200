@@ -182,7 +182,7 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblCustomer.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Please select a customer from the table", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please select a customer from the table!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         Customer customer = (Customer)tblCustomer.getValueAt(selectedRow,0);
@@ -205,7 +205,7 @@ public class ManageCustomerJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblCustomer.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Please select a customer from the table", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please select a customer from the table!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         

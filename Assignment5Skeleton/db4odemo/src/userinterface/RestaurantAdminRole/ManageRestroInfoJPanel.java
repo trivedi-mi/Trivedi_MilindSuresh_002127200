@@ -123,7 +123,7 @@ public class ManageRestroInfoJPanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Manage Restaurant Info");
+        jLabel1.setText("Manage Restaurant Details");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -160,12 +160,12 @@ public class ManageRestroInfoJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblRestaurant.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Please Select a row from table first", "Warining", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please Select a row from table!", "Warining", JOptionPane.WARNING_MESSAGE);
             return;
         }
         Restaurant restaurant = (Restaurant)tblRestaurant.getValueAt(selectedRow,0);
-        ModifyRestroInfoJPanel modifyManager = new ModifyRestroInfoJPanel(userProcessContainer, ecoSystem, restaurantDirectory, restaurant);
-        userProcessContainer.add("ModifyRestaurantInfoJPanel",modifyManager);
+        ModifyRestroInfoJPanel modifyMana = new ModifyRestroInfoJPanel(userProcessContainer, ecoSystem, restaurantDirectory, restaurant);
+        userProcessContainer.add("ModifyRestaurantInfoJPanel",modifyMana);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnModifyActionPerformed

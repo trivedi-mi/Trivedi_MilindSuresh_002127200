@@ -138,8 +138,8 @@ public class ManageMenuJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnBack.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnBack.setText("<Back");
+        btnBack.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -199,11 +199,10 @@ public class ManageMenuJPanel extends javax.swing.JPanel {
                             .addComponent(txtCuisine, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cmbItemType, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(btnBack))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(383, 383, 383)
-                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(82, 82, 82)
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -211,14 +210,12 @@ public class ManageMenuJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addGap(26, 26, 26)
-                .addComponent(btnBack)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addGap(67, 67, 67)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
+                        .addGap(131, 131, 131)
                         .addComponent(btnAdd1)))
                 .addGap(36, 36, 36)
                 .addComponent(jLabel2)
@@ -239,7 +236,9 @@ public class ManageMenuJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel6)
                     .addComponent(cmbItemType, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnAdd)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAdd)
+                    .addComponent(btnBack))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -255,7 +254,7 @@ public class ManageMenuJPanel extends javax.swing.JPanel {
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
         if(txtItemName.getText().isEmpty() || txtPrice.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null,"Fields cannot be empty");
+            JOptionPane.showMessageDialog(null,"Fields cannot be empty!");
             return;
         }
         
@@ -265,7 +264,7 @@ public class ManageMenuJPanel extends javax.swing.JPanel {
             price = Double.parseDouble(txtPrice.getText());
             
         } catch(Exception e) {
-            JOptionPane.showMessageDialog(null, "Price must be float or Integer value");
+            JOptionPane.showMessageDialog(null, "Price must be float or Integer value!");
             return;
         }
         
@@ -278,7 +277,7 @@ public class ManageMenuJPanel extends javax.swing.JPanel {
         txtItemName.setText(" ");
         txtPrice.setText(" ");
         txtCuisine.setText(" ");
-        cmbItemType.setSelectedItem("--Select--");
+        cmbItemType.setSelectedItem("Select");
         
     }//GEN-LAST:event_btnAddActionPerformed
 
@@ -297,7 +296,7 @@ public class ManageMenuJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblMenu.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Please select an item to be deleted", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please select an item to be deleted!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         

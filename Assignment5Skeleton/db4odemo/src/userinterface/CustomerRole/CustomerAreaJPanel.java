@@ -69,9 +69,6 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         this.orderDirectory = ecoSystem.getOrderDirectory();
         valueLabel.setText(account.getUsername());
         populateRequestTable();
-//        initializeLastOrderID();
-//        count = workRequestJTable.getRowCount();
-
         
         populateRestaurantCombo(); 
         
@@ -125,7 +122,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     
     public void populateRestaurantCombo() {
         cmbRestaurant.removeAllItems();
-        cmbRestaurant.addItem("--Select Restaurant--");
+        cmbRestaurant.addItem("Select Restaurant");
         for(Restaurant res : ecoSystem.getRestaurantDirectory().getRestaurantDirectory()) {
             cmbRestaurant.addItem(res.getRestaurantName());
         }
@@ -397,13 +394,13 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
 
         if(txtComment.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null,"Field cannot be empty");
+            JOptionPane.showMessageDialog(null,"Comment cannot be empty!");
             return;
         }
 
         int selectedRow = workRequestJTable.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Please Select a row from table first", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please Select a row from table first!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
@@ -411,14 +408,14 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         order.setMessage(txtComment.getText());
         populateRequestTable();
         txtComment.setText(" ");
-        JOptionPane.showMessageDialog(null, "Comment is added for the Order");
+        JOptionPane.showMessageDialog(null, "Comment is added for the Order!");
     }//GEN-LAST:event_requestTestJButtonActionPerformed
 
     private void refreshTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshTestJButtonActionPerformed
 
         populateRequestTable();
         txtQuantity.setText("");
-        //        populateTable();
+        
 
     }//GEN-LAST:event_refreshTestJButtonActionPerformed
 
@@ -429,20 +426,19 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
             InputStreamReader reader = new InputStreamReader(new FileInputStream("src/MyFile.txt"), "UTF-8");
             try {
                 int lnum= reader.read();
-                //                this.lnum = lastnum;
-                //                idCOunt = String.valueOf(lnum);
+               
                 int selectedRow = tblItem.getSelectedRow();
-                //        int selectedRow []= tblItem.getSelectedRows();
+                
                 if(selectedRow < 0) {
-                    JOptionPane.showMessageDialog(null,"Please Select a row from table first", "Warning", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"Please Select a row from table!", "Warning", JOptionPane.WARNING_MESSAGE);
                     return;
                 }
                 int quantity = Integer.parseInt(txtQuantity.getText());
                 if((txtQuantity).equals(null)){
-                    JOptionPane.showMessageDialog(null,"Enter Quantity greater than 0", "Warning", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"Enter Quantity greater than 0!", "Warning", JOptionPane.WARNING_MESSAGE);
                 }
                 if (quantity < 1){
-                    JOptionPane.showMessageDialog(null,"Enter Quantity greater than 0", "Warning", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"Enter Quantity greater than 0!", "Warning", JOptionPane.WARNING_MESSAGE);
                 }
                 String restaurantName = cmbRestaurant.getSelectedItem().toString();
                 Restaurant restaurant = ecoSystem.getRestaurantDirectory().getRestaurant(restaurantName);
@@ -454,7 +450,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 Order order = ecoSystem.getOrderDirectory().newOrder();
                 order.setCustomer(customer);
 
-                // commented
+                
                 order.setOrderId(String.valueOf(lnum++));
                 order.setQuantity(quantity);
                 order.setMenu(menu);
@@ -484,7 +480,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     private void btnMenuShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuShowActionPerformed
         // TODO add your handling code here:
         if(cmbRestaurant.getSelectedIndex() == 0) {
-            JOptionPane.showMessageDialog(null, "Select a restaurant to view the Menu");
+            JOptionPane.showMessageDialog(null, "Select a restaurant to view the Menu!");
             return;
         }
         populateTable();
@@ -505,13 +501,13 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     private void btnfeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfeedbackActionPerformed
         // TODO add your handling code here:
         if(txtFeedback.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null,"Feedback cannot be empty");
+            JOptionPane.showMessageDialog(null,"Please enter feedback!");
             return;
         }
 
         int selectedRow = workRequestJTable.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Select a row from table first", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Select a row from table!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
@@ -520,10 +516,10 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
             order.setOrderFeedback(txtFeedback.getText());
             populateRequestTable();
             txtFeedback.setText("");
-            JOptionPane.showMessageDialog(null, "Feedback is added for the Order");
+            JOptionPane.showMessageDialog(null, "Feedback is added for the Order!");
             System.out.println(order.getOrderFeedback());
         }
-        else JOptionPane.showMessageDialog(null,"Feedback can be given only after Order is delivered.","Warning",  JOptionPane.WARNING_MESSAGE);
+        else JOptionPane.showMessageDialog(null,"Feedback can be given only after Order is delivered!","Warning",  JOptionPane.WARNING_MESSAGE);
         txtFeedback.setText("");
     }//GEN-LAST:event_btnfeedbackActionPerformed
 

@@ -67,7 +67,7 @@ public class ModifyDeliveryManJPanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Modify Delivery Man");
+        jLabel1.setText("Modify Delivery Man Details");
 
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnBack.setText("Back");

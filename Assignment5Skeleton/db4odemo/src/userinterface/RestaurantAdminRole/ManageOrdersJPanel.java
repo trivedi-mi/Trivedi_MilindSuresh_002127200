@@ -49,7 +49,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         dtm.setRowCount(0);
         
         for(Order order : ecoSystem.getOrderDirectory().getOrderDirectory()) {
-            System.out.println(" Restaurant " + account.getEmployee().getName() + "  " + order.getRestaurant().getRestaurantName());
+            
             if(account.getEmployee().getName().equals(order.getRestaurant().getRestaurantName())) {
                 Object [] row = new Object[8];
                 row[0] = order;
@@ -171,26 +171,26 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblDelivery, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAccepted))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(btnAccepted)
-                        .addGap(76, 76, 76)
-                        .addComponent(btnRejected)
-                        .addGap(54, 54, 54)
-                        .addComponent(btnCompleted)
-                        .addGap(41, 41, 41)
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblDelivery, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43)
                         .addComponent(cmbDeliveryMan, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28)
-                        .addComponent(btnAssign)))
-                .addContainerGap(255, Short.MAX_VALUE))
+                        .addComponent(btnAssign))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addComponent(btnRejected)
+                        .addGap(91, 91, 91)
+                        .addComponent(btnCompleted)
+                        .addGap(64, 64, 64)
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(59, 174, Short.MAX_VALUE))
+            .addComponent(jScrollPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,7 +218,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblOrder.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Please Select a row from table first", "Warining", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please Select a row from table!", "Warining", JOptionPane.WARNING_MESSAGE);
             return;
         }
         
@@ -229,12 +229,12 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         }
         
         else if(order.getOrderStatus().equals("Order Placed")) {
-            JOptionPane.showMessageDialog(null, "Order is should be accepted first");
+            JOptionPane.showMessageDialog(null, "Order should be accepted first!");
             return;
         }
         
         else {
-            JOptionPane.showMessageDialog(null, "Order is already ready for pick up");
+            JOptionPane.showMessageDialog(null, "Order already ready for pick up!");
             return;
         }
         
@@ -246,7 +246,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblOrder.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Please Select a row from table first", "Warining", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please Select a row from table!", "Warining", JOptionPane.WARNING_MESSAGE);
             return;
         }
         
@@ -256,7 +256,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         }
         
         else {
-            JOptionPane.showMessageDialog(null, "Order is already accepted or Completed");
+            JOptionPane.showMessageDialog(null, "Order is already accepted or Completed!");
             return;
         }
         
@@ -275,7 +275,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblOrder.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Please Select a row from table first", "Warining", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please Select a row from table!", "Warining", JOptionPane.WARNING_MESSAGE);
             return;
         }
         
@@ -285,7 +285,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         }
         
         else {
-            JOptionPane.showMessageDialog(null, "Order is already accepted or Completed");
+            JOptionPane.showMessageDialog(null, "Order already accepted or Completed!");
             return;
         }
         
@@ -295,13 +295,13 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
     private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
         // TODO add your handling code here:
         if(cmbDeliveryMan.getSelectedIndex() == 0) {
-            JOptionPane.showMessageDialog(null, "Select a delivery person to deliver the order");
+            JOptionPane.showMessageDialog(null, "Select a delivery person to deliver the order!");
             return;
         }
         
         int selectedRow = tblOrder.getSelectedRow();
         if(selectedRow < 0) {
-            JOptionPane.showMessageDialog(null,"Please Select an order to be assigned", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Please select an order to be assigned!", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         Order order = (Order) tblOrder.getValueAt(selectedRow,0);
@@ -313,23 +313,23 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         }
         
         else if(order.getOrderStatus().equals("Order Placed")) {
-            JOptionPane.showMessageDialog(null, "Order must be accepted first");
+            JOptionPane.showMessageDialog(null, "Order must be accepted first!");
             return;
         }
         
         else if(order.getOrderStatus().equals("Order Accepted")) {
-            JOptionPane.showMessageDialog(null, "Order must be completed first");
+            JOptionPane.showMessageDialog(null, "Order must be completed first!");
             return;
         }
         
         
         else if(order.getOrderStatus().equals("Order Rejected")) {
-            JOptionPane.showMessageDialog(null, "Delivery man cannot be assigned to rejected orders");
+            JOptionPane.showMessageDialog(null, "Delivery man cannot be assigned to rejected orders!");
             return;
         }
         
         else {
-            JOptionPane.showMessageDialog(null, "Order is already ready for pick up");
+            JOptionPane.showMessageDialog(null, "Order is already ready for pick up!");
             return;
         }
         
@@ -360,7 +360,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
 
     private void populateDeliveryCOmbo() {
         cmbDeliveryMan.removeAllItems();
-        cmbDeliveryMan.addItem("--Select Delivery Exec--");
+        cmbDeliveryMan.addItem("Select Delivery Exec");
         for(DeliveryMan dl : ecoSystem.getDeliveryManDirectory().getDeliveryManDirectory()) {
             cmbDeliveryMan.addItem(dl.getEmail());
         }

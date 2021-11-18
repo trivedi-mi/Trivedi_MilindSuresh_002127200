@@ -257,10 +257,7 @@ public class CreateRestaurantJPanel extends javax.swing.JPanel {
 
         flag = restaurantName.matches("^[a-zA-Z]+$");
 
-//        if(flag == false) {
-//            JOptionPane.showMessageDialog(null, "Restaurant name cannot have integer values");
-//            return;
-//        }
+
 
         flag = managerName.matches("^[a-zA-Z]+$");
 
@@ -276,13 +273,13 @@ public class CreateRestaurantJPanel extends javax.swing.JPanel {
        
         flag = phoneNumber.matches("^[0-9]{3}-[0-9]{3}-[0-9]{4}$");
         if(!flag) {
-            JOptionPane.showMessageDialog(null, "Phone Number must have digits only");
+            JOptionPane.showMessageDialog(null, "Enter valid phone number in format XXX-XXX-XXXX!");
             return;
         }
         
         for(Restaurant restaurant : restaurantDirectory.getRestaurantDirectory()) {
             if(restaurant.getPhoneNumber().equals(phoneNumber)) {
-                JOptionPane.showMessageDialog(null, "Enter valid phone number in format XXX-XXX-XXXX!");
+                JOptionPane.showMessageDialog(null, "Phone number already exist!");
                 return;
             }
         }
@@ -308,7 +305,7 @@ public class CreateRestaurantJPanel extends javax.swing.JPanel {
         Employee employee = ecoSystem.getEmployeeDirectory().createEmployee(restaurantName);
         UserAccount userAccount = ecoSystem.getUserAccountDirectory().createUserAccount(userName, password, employee, new AdminRole());
 
-        JOptionPane.showMessageDialog(null, "Restaurant created Successfully!");
+        JOptionPane.showMessageDialog(null, "Restaurant details saved successfully!");
         txtRestaurantName.setText("");
         txtAddress.setText("");
         txtManagerName.setText("");
@@ -326,13 +323,12 @@ public class CreateRestaurantJPanel extends javax.swing.JPanel {
     
     private void btnUploadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadActionPerformed
         // TODO add your handling code here:
-//        String restLogo ;
+
         JFileChooser chooseFile = new JFileChooser();
         chooseFile.showOpenDialog(null);
         File f = chooseFile.getSelectedFile();
         getAbsolutePath = f.getAbsolutePath();
         String restLogo = getAbsolutePath;
-//        System.out.println(restLogo);
         lblLogo.setText(restLogo);
         
     }//GEN-LAST:event_btnUploadActionPerformed
