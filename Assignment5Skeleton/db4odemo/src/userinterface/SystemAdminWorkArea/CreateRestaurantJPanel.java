@@ -120,6 +120,11 @@ public class CreateRestaurantJPanel extends javax.swing.JPanel {
 
         cmbPriceRating.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--", "$", "$$", "$$$" }));
         cmbPriceRating.setToolTipText("Enter the Price Rating for the restaurant\nSelect \n$-- Cheap\n$$$ - Expensive");
+        cmbPriceRating.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbPriceRatingActionPerformed(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -332,6 +337,10 @@ public class CreateRestaurantJPanel extends javax.swing.JPanel {
         lblLogo.setText(restLogo);
         
     }//GEN-LAST:event_btnUploadActionPerformed
+
+    private void cmbPriceRatingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbPriceRatingActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbPriceRatingActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

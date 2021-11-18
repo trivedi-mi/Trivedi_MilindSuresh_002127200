@@ -516,7 +516,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
             order.setOrderFeedback(txtFeedback.getText());
             populateRequestTable();
             txtFeedback.setText("");
-            JOptionPane.showMessageDialog(null, "Feedback is added for the Order!");
+            JOptionPane.showMessageDialog(null, "Thank you for your feedback!");
             System.out.println(order.getOrderFeedback());
         }
         else JOptionPane.showMessageDialog(null,"Feedback can be given only after Order is delivered!","Warning",  JOptionPane.WARNING_MESSAGE);

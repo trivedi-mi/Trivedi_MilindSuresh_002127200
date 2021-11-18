@@ -115,7 +115,7 @@ public class ManageDeliveryManJPanel extends javax.swing.JPanel {
         });
 
         btnModify.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnModify.setText("Update Delivery Man");
+        btnModify.setText("Update Delivery Man Details");
         btnModify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModifyActionPerformed(evt);
@@ -149,8 +149,8 @@ public class ManageDeliveryManJPanel extends javax.swing.JPanel {
                         .addGap(74, 74, 74)
                         .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(105, 105, 105)
-                        .addComponent(btnModify, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(119, 119, 119)
+                        .addComponent(btnModify)
+                        .addGap(114, 114, 114)
                         .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(61, 61, 61)

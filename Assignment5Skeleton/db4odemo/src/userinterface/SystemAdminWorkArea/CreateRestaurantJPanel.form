@@ -257,6 +257,9 @@
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Enter the Price Rating for the restaurant&#xa;Select &#xa;$-- Cheap&#xa;$$$ - Expensive"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbPriceRatingActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>

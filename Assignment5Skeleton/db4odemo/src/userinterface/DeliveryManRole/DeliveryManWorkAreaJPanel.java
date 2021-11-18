@@ -204,7 +204,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
 
         Order order = (Order) workRequestJTable.getValueAt(selectedRow,0);
         
-        order.setOrderStatus("Order Picked up!");
+        order.setOrderStatus("Order Picked up");
         populateTable();
         populateDeliveryTable();
 

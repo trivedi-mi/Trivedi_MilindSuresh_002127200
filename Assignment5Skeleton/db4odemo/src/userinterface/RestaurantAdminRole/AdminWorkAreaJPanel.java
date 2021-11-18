@@ -75,12 +75,13 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         valueLabel = new javax.swing.JLabel();
         lblRestLogo = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Restaurant Manager Dashboard");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 580, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 870, -1));
 
         userJButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         userJButton.setText("Manage Restaurant Details");
