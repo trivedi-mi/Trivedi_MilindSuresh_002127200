@@ -80,7 +80,7 @@ public class ManageDeliveryManJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(204, 204, 255));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Delivery Executives");
 
@@ -174,7 +174,7 @@ public class ManageDeliveryManJPanel extends javax.swing.JPanel {
                     .addComponent(btnDelete)
                     .addComponent(btnCreate)
                     .addComponent(btnModify))
-                .addContainerGap(335, Short.MAX_VALUE))
+                .addContainerGap(322, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

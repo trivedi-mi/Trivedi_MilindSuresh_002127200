@@ -97,6 +97,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 255, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -179,16 +180,16 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 1060, 180));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Delivery Executive Dashboard");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 20, 1190, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
         jLabel2.setText("My Orders");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 330, 30));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
         jLabel3.setText("My Orders Pending for Pickup");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 330, 30));
     }// </editor-fold>//GEN-END:initComponents

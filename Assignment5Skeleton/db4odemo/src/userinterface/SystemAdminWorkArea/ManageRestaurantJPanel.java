@@ -82,7 +82,7 @@ public class ManageRestaurantJPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Restaurants");
 
@@ -176,7 +176,7 @@ public class ManageRestaurantJPanel extends javax.swing.JPanel {
                     .addComponent(btnDelete)
                     .addComponent(btnCreate)
                     .addComponent(btnModify))
-                .addContainerGap(433, Short.MAX_VALUE))
+                .addContainerGap(420, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

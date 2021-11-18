@@ -77,7 +77,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dubai", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Restaurant Manager Dashboard");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 580, -1));
@@ -112,13 +112,13 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(manageOrganizationJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 240, -1));
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        enterpriseLabel.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         enterpriseLabel.setText("Restaurant :");
         add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 120, 30));
 
-        valueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        valueLabel.setFont(new java.awt.Font("Dubai", 1, 18)); // NOI18N
         valueLabel.setText("<value>");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 130, -1));
+        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 130, 30));
         add(lblRestLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, 210, 120));
     }// </editor-fold>//GEN-END:initComponents
 
