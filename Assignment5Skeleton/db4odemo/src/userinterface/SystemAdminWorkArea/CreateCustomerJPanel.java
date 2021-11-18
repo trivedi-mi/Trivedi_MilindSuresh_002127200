@@ -291,7 +291,7 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
         
         for(UserAccount account : ecoSystem.getUserAccountDirectory().getUserAccountList()) {
             if(account.getUsername().equals(userName)) {
-                JOptionPane.showMessageDialog(null, "Username Already exist!");
+                JOptionPane.showMessageDialog(null, "Username already exist!");
                 return;
             }
         }
@@ -302,7 +302,8 @@ public class CreateCustomerJPanel extends javax.swing.JPanel {
         Employee employee = ecoSystem.getEmployeeDirectory().createEmployee(name);
         UserAccount usserAccount = ecoSystem.getUserAccountDirectory().createUserAccount(userName, password, employee, new CustomerRole());
         
-        JOptionPane.showMessageDialog(null, "Customer is Created Successfully!");
+        
+        JOptionPane.showMessageDialog(null, "Customer created successfully!");
         
         txtAge.setText(" ");
         txtEmailAddress.setText(" ");
