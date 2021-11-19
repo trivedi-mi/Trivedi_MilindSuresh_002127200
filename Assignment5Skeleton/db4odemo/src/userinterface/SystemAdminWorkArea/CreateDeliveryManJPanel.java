@@ -297,7 +297,7 @@ public class CreateDeliveryManJPanel extends javax.swing.JPanel {
         Employee employee = ecoSystem.getEmployeeDirectory().createEmployee(email);
         ecoSystem.getUserAccountDirectory().createUserAccount(userName, password, employee, new DeliverManRole());
 
-        JOptionPane.showMessageDialog(null, "Delivery man profile details saved successfully!");
+        JOptionPane.showMessageDialog(null, "Delivery executive profile details saved successfully!");
         
         txtFirstName.setEditable(false);
         txtLastName.setEditable(false);
